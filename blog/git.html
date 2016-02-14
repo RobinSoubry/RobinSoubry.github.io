@@ -1,28 +1,80 @@
 <!DOCTYPE html>
 <head>
-  <title>Your page title here</title>
+  <title>Technical Blog - Week 1 -Introduction to the command line + Git and GitHub to beginners</title>
+  <meta name="author" content="Robin Soubry">
   <meta charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="your-stylesheet-link-here.css">
 </head>
 <body>
   <main>
-    <h1>Post Title</h1>
+    <h1>Introduction to the command line + Git and GitHub to beginners</h1>
     <h2>The subtitle, if you want it</h2>
-    <h4>Today's Date</h4>
+    <h4>February 13<sup>th</sup> 2016</h4>
   
+    <p>In this post I will introduce you to some essential components that a programmer will use in his daily coding life: <em>The Command Line Interface (CLI)</em> and <em>Version Control</em>.</p>
+
+  <h2>The Command Line Interface (CLI)</h2>
     <section>
       <p>
-        Your first paragraph goes here. I'm using Web 2.0 Ipsum to add content. Webtwo ipsum dolor sit amet, eskobo chumby doostang bebo. Nuvvo koofers oooooc voxy klout jaiku palantir flickr insala zinch napster oooj, airbnb mzinga vimeo yuntaa balihoo plickers whrrl edmodo appjet kippt. Yoono imvu hulu eduvant blekko imvu ebay voki napster skype, hipmunk zinch wesabe bubbli ning meebo bitly zlio. Fleck elgg ideeli disqus rovio zillow sifteo blyve jabber, bitly geni zoho foodzie qeyno twones klout jiglu, hipmunk jaiku balihoo plickers heekya eskobo yuntaa. Sococo whrrl plickers movity whrrl zinch voki nuvvo meebo, quora heroku unigo kno wufoo jibjab woopra, groupon yuntaa spock mzinga jumo meebo movity.
+        Using the Command Line Interface of your Mac’s Terminal makes you instantly look like a pro!
       </p>
       <p>
-          Lijit groupon ning stypi eskobo blyve ning shopify oooooc, meebo groupon prezi ebay voxy bitly diigo. Spock ifttt skype hipmunk movity whrrl bebo oooj empressr, disqus insala palantir bitly dropio zimbra zinch oooooc etsy, klout spock insala quora omgpop trulia jibjab. Sifteo dogster ebay grockit geni scribd bitly ning unigo, plickers voki mzinga tumblr kaboodle mozy whrrl woopra udemy, foodzie joukuu elgg twitter shopify akismet rovio. Kosmix eduvant woopra dopplr balihoo ning bebo akismet, boxbe vimeo kosmix shopify zappos bitly geni loopt, qeyno disqus sococo squidoo wikia octopart.
+          Instead of navigating through the familiar Graphic User Interface (GUI) with your mouse, fancy icons and a folder structure where you drag and drop files or open them with double click, you use a set of commands to get textual results.<br>
+          This may seem odd to many youngsters, but this is how people used to operate computers in the early days; and it still holds many advantages for current day programmers. In fact the CLI gives you direct access to the raw computing power of your computer without being limited to the intrinsic design restrictions of the GUI. Not only will these operations require less calculations for the processor because the whole GUI does not need to be rendered on the screen (efficiency), the user will also have much more freedom in the type of commands he/she wants the machine to execute.
+      </p>
+      <p><i>
+          For example, if you are looking for the number of occurrences of a specific word in all the files on your computer, you can list all the files, the exact lines on which the word occurs in a document or even obtain some context about the file itself (author, creation date, etc.) by using some simple commands in the CLI. Afterwards, you can even have the results written to a text file for further use. The finder program on your computer on the other hand will be able to list all the documents, but good luck in trying to dig deeper or doing something useful (or efficient) with the results of your search.
+      </i></p>
+      <p>
+          GUI’s are very convenient and optimized for predefined use cases that apply to a majority of users. As a programmer however, you will need more control over the machine’s capabilities in order to define your own use cases and create your own design restrictions for the applications you will write in your career.
       </p>
       <p>
-          Kazaa meevee eduvant gsnap movity kosmix kazaa klout jumo, trulia unigo groupon wakoopa spock knewton glogster heroku oooj, ning imvu appjet eskobo zillow twitter rovio. Glogster chegg voxy greplin dopplr voki foodzie xobni weebly odeo, sococo zynga knewton loopt palantir lala blyve tumblr blekko, twones akismet plaxo kippt meebo zillow zooomr insala. Oovoo imeem napster divvyshot zinch imeem voxy shopify, fleck kazaa zinch lanyrd boxbe joost wakoopa nuvvo, orkut elgg heekya sifteo scribd napster. Yammer yoono groupon dopplr cloudera nuvvo eduvant klout, voxy groupon disqus eduvant oooj greplin.
+          I hope this short introduction of the Command Line Interface gives you a better understanding of the benefits it has for you as a programmer, and I highly encourage you to obtain a solid proficiency in the use of your Terminal.<br>
+          I find following resources very useful to learn the basics of CLI:
+        <ul>
+          <li><a href="http://cli.learncodethehardway.org">Learn Code The Hard Way - CLI</a></li>
+          <li><a href="https://www.codecademy.com/learn/learn-the-command-line">Code Academy - CLI</a></li>
+        </ul>
       </p>
-  
-        <!-- copy and paste as many sections as you want to add paragraphs -->
       </section>
+<h2>Version Control</h2>
+    <section>
+      <p>
+          Another essential concept in developing is <ins>Version Control</ins>. Version Control is a handy framework to keep track of changes in the code you or your are working on.
+      </p>
+      <p>
+          As many of us have experienced before, working with multiple people on a same document is challenging. Person A makes a modification to a document, saves it on his or her local drive, sends it over to person B by e-mail, Dropbox or any other medium. Person B however may also have made some changes in the meantime and soon there will be multiple versions circulating without anyone knowing which file contains what changes etc. leading to confusion, file conflicts and errors sooner rather than later!
+      </p>
+      <p>
+          Software applications are often built on large blocks of code that are written by different people, in different times or even with different assumptions or links to external applications and frameworks. Because of these interdependencies, it is essential to maintain a clear overview of which code-blocks are written by whom, which changes they include and what impact the code may have on the bigger “master-code” of an application. Therefore the use of Git and GitHub have proven to be especially useful to the development community.
+      </p>
+      <p>
+          <em>Git</em> is a version control system that facilitates this process on your local computer. In sum, you define a folder for which you want to track changes. Each file within this folder will then be tracked though its history. To keep a clear overview, Git has several handy tricks:
+          <ul>
+            <li>Previous versions of documents are stored in a hidden folder (.git), so you will only see the most recent files in your directory.</li>
+            <li>You have to “commit” your changes. A “commit” is a time-check, some kind of an “official moment” on which you want to save the changes to your files. In a “commit”, you can:
+              <ul>
+                <li>Combine multiple files as a package (to keep better overview of broader modifications)</li>
+                <li>Add a message about the updates you carried out (ie. bug fixes, addition of features etc.)</li>
+                <li>Add an author and a timestamp (happens automatically)</li>
+              </ul>
+            </li>
+          </ul>
+      </p>
+      <p>
+          Whereas Git is a wonderful system to track changes on your own computer, it has one big disadvantage: your files remain stored on your own (local) computer. This is particularly inconvenient when your computer gets stolen or crashes. Moreover, locally stored files are not really helpful when working in a broader team.
+      </p>
+      <p>
+          This is where <em>GitHub</em> comes in the picture. GitHub is an organization that connects your local Git environment to the cloud (a network of other computers). Not only will your data always be safe, you will also be able to share your work with colleagues, clients or peers with some simple clicks.<br>
+          Besides facilitating file sharing, GitHub also provides handy tools to integrate new blocks or external blocks of code to the master application. 
+      </p>
+      <p><i>
+          For example, if you worked locally on a specific new feature, it’s best practice not to immediately add it to mature running applications (with clean code). Instead, GitHub provides a workflow in which other developers can review your code on bugs or other risks to the master-code, before you integrate the new feature.
+      </i></p>
+      <p>
+          In addition to securely storing your code in the cloud and collaborating with other developers, GitHub has grown to be a major platform for sharing code in the open source community (ie. mail server applications etc.). Because developers can showcase the great work they did on their personal profile, GitHub is also widely used by recruiters in the tech industry to search for new candidates.
+      </p>
+    </section>
     </main>
   </body>
   </html>
