@@ -4,101 +4,150 @@
 	<title>Robin Soubry - Blog</title>
 	<meta charset="UTF-8">
 	<meta name="author" content="Robin Soubry">
+	<link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+	<link rel="stylesheet" type="text/css" href="../stylesheets/style-blog-index.css">
 </head>
-<body>
-<header><a href="../index.html">Robin Soubry</a></header>
-	
-	<!--Navigation Bar  (Same on every page)-->
-	<nav>
-		<a href="#">About Me</a>
-		<a href="#">My Work</a>
-		<a href="#">Blog</a>
-		<a href="#">Contact</a>
-	</nav>
 
-	<hr>
+<body>
+	<div id="center-page">
+		<header>
+			<div id="logo" class="float-left">
+				<h1><a href="../index.html">Robin Soubry</a></h1>
+			</div>
+
+			<!--Navigation Bar  (Same on every page)-->
+			<nav class="float-left">
+				<ul>
+					<li><a href="#">About Me</a></li>
+					<li><a href="#">My Work</a></li>
+					<li><a href="#"><span class="active-tab">Blog</span></a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<hr>
 
 	<!--Bread Crums -->
-	<a href="#">Blog</a> > <a href="#">Recent Posts</a>
-
-	<!-- Subnavigation in blogposts -->
-	<div>
-		<a href="#">Recent Posts</a>
-		<a href="#">Business Blog</a>
-		<a href="#">Software Blog</a>
-		<a href="#">Adventure Blog</a>
+	<div class="breadcrumbs">
+		<ul>
+			<li><a href="#">Blog</a> &gt; &nbsp; </li>
+			<li> <a href="#"><span class="active-breadcrumb">Recent Posts</strong></a></li>
+		</ul>
 	</div>
 
+	<div class="clear-float"></div>
+
+	<!-- Subnavigation in blogposts -->
+	<div class="navigation-blogposts">
+		<ul>
+			<li><a href="#"><span class="active-post-tab">Recent Posts</span></a></li>
+			<li><a href="#">Business Blog</a></li>
+			<li><a href="#">Software Blog</a></li>
+			<li><a href="#">Adventure Blog</a></li>
+		</ul>
+	</div>
+
+	<div class="clear-float"></div>
+
 	<!--List with recent blogposts -->
-	<div>
+	<div class="list-recent-posts float-left">
 		<section>
-			<a href="#"><img src="http://alistapart.com/d/fillingyourdancecard/dance-card.jpg" alt="Six steps to close the sale!"  height="150" width="150"></a>
-			<h2>Six steps to close the sale</h2>
-			<p>02/20/2016</p><a href="#">Business</a>
-			<p>Lorem ipsum dolor sit amet, at dolorum platonem duo. Has at diceret sensibus referrentur. Novum errem nec ad.</p>
+			<div class="float-left thumb">
+				<a href="#"><img src="http://alistapart.com/d/fillingyourdancecard/dance-card.jpg" alt="Six steps to close the sale!"  height="150" width="150"  class="img-rnd"></a>
+			</div>
+			<div class="float-left teaser">
+				<h2>Six steps to close the sale</h2>
+				<p>02/20/2016</p><a href="#"><em>Business</em></a>
+				<p>Lorem ipsum dolor sit amet, at dolorum platonem duo. Has at diceret sensibus referrentur. Novum errem nec ad.</p>
+			</div>
 			<div>
 				<!--Here comes the social plugin of Facebook and Twitter-->
 			</div>
 		</section>
 		
+		<div class="clear-float"></div>
+
 		<hr>
 
 		<section>
-			<a href="#"><img src="http://theremedyforit.com/wp-content/uploads/2011/12/ControlVersion.jpg" alt="Version Control Lego" height="150" width="150"></a>
-			<h2>Version Control !</h2>
-			<p>02/20/2016</p><a href="#">Software</a>
-			<p>Lorem ipsum dolor sit amet, at dolorum platonem duo. Has at diceret sensibus referrentur. Novum errem nec ad.</p>
+			<div class="float-left thumb">
+				<a href="#"><img src="http://theremedyforit.com/wp-content/uploads/2011/12/ControlVersion.jpg" alt="Version Control Lego" height="150" width="150" class="img-rnd"></a>
+			</div>
+			<div class="float-left teaser">
+				<h2>Version Control !</h2>
+				<p>02/20/2016</p><a href="#"><em>Software</em></a>
+				<p>Lorem ipsum dolor sit amet, at dolorum platonem duo. Has at diceret sensibus referrentur. Novum errem nec ad.</p>
+			</div>
 			<div>
 				<!--Here comes the social plugin of Facebook and Twitter-->
 			</div>
 		</section>
 
+		<div class="clear-float"></div>
+
 		<hr>
 
 		<section>
-			<a href="#"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQkVGhE4sjn8UBYl9Ffc7GhrcckgJW9YLeBiL27sVtllcoso0Tg" alt="Mount Lenin Ascent" height="150" width="150"></a>
-			<h2>Mount Lenin Ascent</h2>
-			<p>02/20/2016</p><a href="#">Adventure</a>
-			<p>Lorem ipsum dolor sit amet, at dolorum platonem duo. Has at diceret sensibus referrentur. Novum errem nec ad.</p>
+			<div class="float-left thumb">
+				<a href="#"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQkVGhE4sjn8UBYl9Ffc7GhrcckgJW9YLeBiL27sVtllcoso0Tg" alt="Mount Lenin Ascent" height="150" width="150" class="img-rnd"></a>
+			</div>
+			<div class="float-left teaser">
+				<h2>Mount Lenin Ascent</h2>
+				<p>02/20/2016</p><a href="#"><em>Adventure</em></a>
+				<p>Lorem ipsum dolor sit amet, at dolorum platonem duo. Has at diceret sensibus referrentur. Novum errem nec ad.</p>
+			</div>
 			<div>
 				<!--Here comes the social plugin of Facebook and Twitter-->
 			</div>
 		</section>
 
+		<div class="clear-float"></div>
+		
 		<hr>
 
 		<section>
-			<a href="#"><img src="http://jesusgilhernandez.com/wp-content/uploads/2013/07/value-based.jpg" alt="Value based pricing"  height="150" width="150"></a>
-			<h2>Value based pricing</h2>
-			<p>02/20/2016</p><a href="#">Business</a>
-			<p>Lorem ipsum dolor sit amet, at dolorum platonem duo. Has at diceret sensibus referrentur. Novum errem nec ad.</p>
+			<div class="float-left thumb">
+				<a href="#"><img src="http://jesusgilhernandez.com/wp-content/uploads/2013/07/value-based.jpg" alt="Value based pricing"  height="150" width="150" class="img-rnd"></a>
+			</div>
+			<div class="float-left teaser">
+				<h2>Value based pricing</h2>
+				<p>02/20/2016</p><a href="#"><em>Business</em></a>
+				<p>Lorem ipsum dolor sit amet, at dolorum platonem duo. Has at diceret sensibus referrentur. Novum errem nec ad.</p>
+			</div>
 			<div>
 				<!--Here comes the social plugin of Facebook and Twitter-->
 			</div>
 		</section>
+	
 	</div>
+
 
 	<!--Life Hack of the Week Section-->
-	<div>
-		<h2>Life Hack of the Week:</h2>
-		<q>Lorem ipsum dolor sit amet</q>
+	<div class="float-left life-hack">
+		<h2 class="text-courier">Life Hack of the Week:</h2>
+		<q class="text-courier"><em>Use the Two-Minute Rule:</em> If you can do it within two minutes or less, do it straight away</q>
 	</div>
+
+	<div class="clear-float"></div>
 
 	<hr>
 
 	<!--Footer Section (Same on every page)-->
-	<footer>
-		<p>&copy; Robin Soubry - 2016</p>
-		<div>
-			<a href="https://www.instagram.com/robinsoubry/"><img src="http://www.iconsdb.com/icons/preview/black/instagram-xxl.png" alt="Instagram Icon" height="24"></a>
+		<footer>
+			<div class="copyright float-left">
+			<p>&copy; Robin Soubry - 2016</p>
+			</div>
+			<div class="social-links float-left">
+				<a href="https://www.instagram.com/robinsoubry/" target="_blank"><img src="http://www.iconsdb.com/icons/preview/black/instagram-xxl.png" alt="Instagram Icon" height="24"></a>
 
-			<a href="https://twitter.com/RSoubry"><img src="https://cdn1.iconfinder.com/data/icons/capsocial/500/twitter-512.png" alt="Twitter Icon" height="24"></a>
-		
-			<a href="https://www.linkedin.com/in/robinsoubry"><img src="http://www.iconsdb.com/icons/preview/black/linkedin-3-xxl.png" alt="LinkedIn Icon" height="24"></a>
-		
-			<a href="https://github.com/RobinSoubry"><img src="http://www.iconsdb.com/icons/preview/black/github-8-xxl.png" alt="GitHub Icon" height="24"></a>
-		</div>
-	</footer>
-
+				<a href="https://twitter.com/RSoubry" target="_blank"><img src="https://cdn1.iconfinder.com/data/icons/capsocial/500/twitter-512.png" alt="Twitter Icon" height="24"></a>
+			
+				<a href="https://www.linkedin.com/in/robinsoubry" target="_blank"><img src="http://www.iconsdb.com/icons/preview/black/linkedin-3-xxl.png" alt="LinkedIn Icon" height="24"></a>
+			
+				<a href="https://github.com/RobinSoubry" target="_blank"><img src="http://www.iconsdb.com/icons/preview/black/github-8-xxl.png" alt="GitHub Icon" height="24"></a>
+			</div>
+		</footer>
+	</div>
 </body>
 </html>

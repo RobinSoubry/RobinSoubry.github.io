@@ -1,0 +1,69 @@
+/*The style-index document contains alle specific styling elements to the index of the website.*/
+
+#profile{
+	width: 300px;
+	height: 300px;
+	float: left;
+	display: block;
+}
+
+#word-cloud {
+	float: left;
+	width: 660px;
+	height: 300px;
+	display: block;
+	background-color: brown;
+}
+
+#word-cloud > p {
+	padding: 20px;
+}
+
+.text-double {
+	font-size: 2em;
+}
+
+.text-triple {
+	font-size: 3em;
+}
+
+.text-aliceblue {
+	color: #00BCD4;
+}
+
+.text-orange{
+	color: orange;
+}
+
+.text-red{
+	color: red;
+}
+
+.text-green{
+	color:green;
+}
+
+.text-center{
+	text-align: center;
+}
+
+.text-bold{
+	font-weight: bold;
+}
+
+.project-highlights{
+	width: 300px;
+	float: left;
+}
+
+.project-highlights > p {
+	margin-bottom: 6px;
+}
+
+.project-highlights > a {
+	font-size: 10px;
+}
+
+.side-col{
+	margin-left: 30px;
+}
