@@ -1,0 +1,78 @@
+/*The Default stylesheet will be applied to all the pages on the website, and includes repetitive elements, classes or ids. */
+
+
+h1, h2, h3, h4, h5, h6, p, li, a {
+	font-family: helvetica, arial;
+}
+
+.float-left{
+	float: left;
+}
+
+.clear-float {
+	clear: both;
+}
+
+#center-page{
+	width: 960px;
+	margin: auto;
+}
+
+#logo{
+	width: 34%;
+	height: 80px;
+}
+
+#logo > h1 {
+	margin-left: 20%;
+}
+
+nav {
+	width: 66%;
+	height: 80px;
+}
+
+nav > ul {
+	list-style-type: none;
+}
+
+nav > ul > li {
+	float: left;
+	width: 25%;
+	padding-top: 1.2em;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+}
+
+a:hover{
+	color: orange;
+}
+
+.active-tab {
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.copyright{
+	width: 66%;
+	height: 24px;
+}
+
+.copyright > p {
+	margin: 0 auto;
+	padding: 2px;
+	text-align: center;
+}
+
+.social-links{
+	width: 34%;
+	height: 24px;
+}
+
+.social-links a{
+	float: right;
+	margin-right: 4px;
+}

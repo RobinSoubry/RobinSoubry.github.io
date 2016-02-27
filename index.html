@@ -4,110 +4,140 @@
 	<title>Robin Soubry - Personal Website</title>
 	<meta charset="UTF-8">
 	<meta name="author" content="Robin Soubry">
+	<link rel="stylesheet" type="text/css" href="stylesheets/default.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/style-index.css">
 </head>
 <body>
-	<header><a href="#">Robin Soubry</a></header>
-	
-	<!--Navigation Bar  (Same on every page)-->
-	<nav>
-		<a href="#">About Me</a>
-		<a href="#">My Work</a>
-		<a href="blog/index.html">Blog</a>
-		<a href="#">Contact</a>
-	</nav>
+	<div id="center-page">
+		<header>
+			<div id="logo" class="float-left">
+				<h1><a href="#">Robin Soubry</a></h1>
+			</div>
 
-	<hr>
+			<!--Navigation Bar  (Same on every page)-->
+			<nav class="float-left">
+				<ul>
+					<li><a href="#">About Me</a></li>
+					<li><a href="#">My Work</a></li>
+					<li><a href="blog/index.html">Blog</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
 
-	<!-- Me in a nutshell -->
-	<div>
-		<img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAaCAAAAJDRjZjhhYzQyLTZjMDMtNDc2NC05OWU0LTY5NWY3NTZlMTYyYQ.jpg" alt="Image Robin Soubry"  height="300" width="300">
-		<aside>
-			<p>
-				software
-				<span>statistics</span>
-				<span>technology</span>
-				tips
-				tools
-				tools to read
-				<span>travel</span>
-				tutorials
-				tutorials twitter
-				typography
-				<span>Product management</span>
-				usability
-				video
-				teaching
-				<span>visualization</span>
-				web
-				web 2.0
-				<span>web-design</span>
-				webdev
-				Wiki
-				<span>Financial Analysis</span>
-				writing
-				youtube
-				<span>Entrepreneur</span>
-				<!-- These span elements will be styled with CSS to get the right colors and font sizes to form the word cloud -->
-			</p>
-		</aside>
-	</div>
-	
-	<!-- Section with work I want to showcase to the reader -->
-	<div>
-		<h2>Featured Work</h2>
+		<div class="clear-float"></div>
 		<hr>
-		<div>
-			<a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv-HUw4i6ddAywX0mO57p7etENFo89GJycJqJ-zHwF4xa7R15jTw" alt="Lead Attribution"  height="150" width="300"></a>
-			<h4>Case Study: Online to offline lead attribution</h4>
-			<p>Lorem ipsum dolor sit amet, at dolorum platonem duo. Has at diceret sensibus referrentur. Novum errem nec ad.</p>
-		</div>
-				<div>
-			<a href="#"><img src="http://www.xtreemsolution.com/img/rubyrails.png" alt="Ruby on Rails" height="150" width="300"></a>
-			<h4>First steps as a coder</h4>
-			<p>Lorem ipsum dolor sit amet, at dolorum platonem duo. Has at diceret sensibus referrentur. Novum errem nec ad.</p>
-		</div>
-		<div>
-			<a href="#"><img src="http://alloneocean.org/wp-content/uploads/2014/03/031-cleaningbeach.jpg" alt="Beach Clean Up" height="150" width="300"></a>
-			<h4>What's Up Clean Up</h4>
-			<p>Lorem ipsum dolor sit amet, at dolorum platonem duo. Has at diceret sensibus referrentur. Novum errem nec ad.</p>
-		</div>
-	</div>
 
-	<!-- This section will highlight the most recent blogposts -->
-	<div>
-		<h2>Latest Blog Posts</h2>
+		<main>
+			<div>
+				<div id="profile">
+				<img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAaCAAAAJDRjZjhhYzQyLTZjMDMtNDc2NC05OWU0LTY5NWY3NTZlMTYyYQ.jpg" alt="Image Robin Soubry"  height="300" width="300">
+				</div>
+				<div id="word-cloud">
+					<p>
+						Software
+						<span class="text-double">Digital Marketing</span>
+						<span class="text-triple">Technology</span>
+						Tips
+						Retail
+						<span class="text-aliceblue">Travel</span>
+						<span class="text-double">Business Strategy</span>
+						Design
+						<span class="text-double text-orange">Product Management</span>
+						Expeditions
+						<span class="text-bold">Innovation</span>
+						Problem Solving
+						<span class="text-red">Visualization</span>
+						Lean
+						Data Science
+						<span class="text-double">Web-Development</span>
+						<span class="text-green">Financial Analysis</span>
+						Growth Hacking
+						<span class="text-double text-bold">Analytical</span>
+						Volunteer
+						<span class="text-triple">Entrepreneur</span>
+					</p>
+				</div>
+			</div>
+
+			<div class="clear-float"></div>
+			<hr>
+
+			<!--Featured Work -->
+			<div>
+				<h2>Featured Work</h2>
 				<hr>
-		<div>
-			<a href="#"><img src="http://alistapart.com/d/fillingyourdancecard/dance-card.jpg" alt="Six steps to close the sale!"  height="150" width="300"></a>
-			<h4>Six steps to close the sale</h4>
-			<p>Lorem ipsum dolor sit amet, at dolorum platonem duo. Has at diceret sensibus referrentur. Novum errem nec ad.</p>
-		</div>
-				<div>
-			<a href="#"><img src="http://theremedyforit.com/wp-content/uploads/2011/12/ControlVersion.jpg" alt="Version Control Lego" height="150" width="300"></a>
-			<h4>Version Control !</h4>
-			<p>Lorem ipsum dolor sit amet, at dolorum platonem duo. Has at diceret sensibus referrentur. Novum errem nec ad.</p>
-		</div>
-				<div>
-			<a href="#"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQkVGhE4sjn8UBYl9Ffc7GhrcckgJW9YLeBiL27sVtllcoso0Tg" alt="Mount Lenin Ascent" height="150" width="300"></a>
-			<h4>Mount Lenin Ascent</h4>
-			<p>Lorem ipsum dolor sit amet, at dolorum platonem duo. Has at diceret sensibus referrentur. Novum errem nec ad.</p>
-		</div>
-	</div>
-	
-	<hr>
-	
-	<!--Footer Section (Same on every page)-->
-	<footer>
-		<p>&copy; Robin Soubry - 2016</p>
-		<div>
-			<a href="https://www.instagram.com/robinsoubry/"><img src="http://www.iconsdb.com/icons/preview/black/instagram-xxl.png" alt="Instagram Icon" height="24"></a>
+				<div class="project-highlights">
+					<a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv-HUw4i6ddAywX0mO57p7etENFo89GJycJqJ-zHwF4xa7R15jTw" alt="Lead Attribution"  height="150" width="300"></a>
+					<h4>Case: Online - offline lead attribution</h4>
+					<p>Lorem ipsum dolor sit amet, at dolorum platonem duo. Has at diceret sensibus referrentur. Novum errem nec ad.</p>
+					<a href="#">Read More</a>
+				</div>
+		
+				<div class="project-highlights side-col">
+					<a href="#"><img src="http://www.xtreemsolution.com/img/rubyrails.png" alt="Ruby on Rails" height="150" width="300"></a>
+					<h4>First steps as a coder</h4>
+					<p>Lorem ipsum dolor sit amet, at dolorum platonem duo. Has at diceret sensibus referrentur. Novum errem nec ad.</p>
+					<a href="#">Read More</a>
+				</div>
+				
+				<div class="project-highlights side-col">
+					<a href="#"><img src="http://alloneocean.org/wp-content/uploads/2014/03/031-cleaningbeach.jpg" alt="Beach Clean Up" height="150" width="300"></a>
+					<h4>What's Up Clean Up</h4>
+					<p>Lorem ipsum dolor sit amet, at dolorum platonem duo. Has at diceret sensibus referrentur. Novum errem nec ad.</p>
+					<a href="#">Read More</a>
+				</div>
+			<div>
 
-			<a href="https://twitter.com/RSoubry"><img src="https://cdn1.iconfinder.com/data/icons/capsocial/500/twitter-512.png" alt="Twitter Icon" height="24"></a>
+			<!-- This section will highlight the most recent blogposts -->
+			<div class="clear-float"></div>
+
+			<div>
+				<h2>Latest Blog Posts</h2>
+				<hr>
+				<div class="project-highlights">
+					<a href="#"><img src="http://alistapart.com/d/fillingyourdancecard/dance-card.jpg" alt="Six steps to close the sale!"  height="150" width="300"></a>
+					<h4>Six steps to close the sale</h4>
+					<p>Lorem ipsum dolor sit amet, at dolorum platonem duo. Has at diceret sensibus referrentur. Novum errem nec ad.</p>
+					<a href="#">Read More</a>
+				</div>
+				
+				<div class="project-highlights side-col">
+					<a href="#"><img src="http://theremedyforit.com/wp-content/uploads/2011/12/ControlVersion.jpg" alt="Version Control Lego" height="150" width="300"></a>
+					<h4>Version Control !</h4>
+					<p>Lorem ipsum dolor sit amet, at dolorum platonem duo. Has at diceret sensibus referrentur. Novum errem nec ad.</p>
+					<a href="#">Read More</a>
+				</div>
+
+				<div class="project-highlights side-col">
+					<a href="#"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQkVGhE4sjn8UBYl9Ffc7GhrcckgJW9YLeBiL27sVtllcoso0Tg" alt="Mount Lenin Ascent" height="150" width="300"></a>
+					<h4>Mount Lenin Ascent</h4>
+					<p>Lorem ipsum dolor sit amet, at dolorum platonem duo. Has at diceret sensibus referrentur. Novum errem nec ad.</p>
+					<a href="#">Read More</a>
+				</div>
+			</div>
+		</main>
+
+		<div class="clear-float"></div>
 		
-			<a href="https://www.linkedin.com/in/robinsoubry"><img src="http://www.iconsdb.com/icons/preview/black/linkedin-3-xxl.png" alt="LinkedIn Icon" height="24"></a>
-		
-			<a href="https://github.com/RobinSoubry"><img src="http://www.iconsdb.com/icons/preview/black/github-8-xxl.png" alt="GitHub Icon" height="24"></a>
-		</div>
-	</footer>
+		<hr>
+
+		<!--Footer Section (Same on every page)-->
+		<footer>
+			<div class="copyright float-left">
+			<p>&copy; Robin Soubry - 2016</p>
+			</div>
+			<div class="social-links float-left">
+				<a href="https://www.instagram.com/robinsoubry/"><img src="http://www.iconsdb.com/icons/preview/black/instagram-xxl.png" alt="Instagram Icon" height="24"></a>
+
+				<a href="https://twitter.com/RSoubry"><img src="https://cdn1.iconfinder.com/data/icons/capsocial/500/twitter-512.png" alt="Twitter Icon" height="24"></a>
+			
+				<a href="https://www.linkedin.com/in/robinsoubry"><img src="http://www.iconsdb.com/icons/preview/black/linkedin-3-xxl.png" alt="LinkedIn Icon" height="24"></a>
+			
+				<a href="https://github.com/RobinSoubry"><img src="http://www.iconsdb.com/icons/preview/black/github-8-xxl.png" alt="GitHub Icon" height="24"></a>
+			</div>
+		</footer>
+
+	</div>
 </body>
 </html>

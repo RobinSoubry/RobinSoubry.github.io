@@ -1,0 +1,79 @@
+.breadcrumbs > ul {
+	list-style-type: none;
+	font-size: 11px;
+}
+
+.breadcrumbs > ul > li {
+	float: left;
+	margin: 0px;
+}
+
+.breadcrumbs > a {
+	color: black;
+	text-decoration: none;
+}
+
+.navigation-blogposts{
+	margin-top: 8px;
+	border: 1px solid orange;
+	background-color: lightgsilverray;
+	width: 652px;
+	border-radius: 8px;
+	height: 20px;
+	padding: 4px;
+}
+
+.navigation-blogposts > ul {
+	list-style-type: none;
+	margin: auto;
+}
+
+.navigation-blogposts > ul > li {
+	float: left;
+	margin: 0px;
+	width: 25%;
+}
+
+.active-post-tab{
+	color: orange;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.list-recent-posts{
+	margin-top: 8px;
+	width: 660px;
+	border: 1px solid orange;
+	border-radius: 8px;
+}
+
+.img-rnd{
+	border-radius: 50%;
+}
+
+.thumb{
+	margin: 10px;
+	width: 25%
+}
+
+.teaser{
+	width: 70%;
+}
+
+.life-hack{
+	border:1px solid orange;
+	border-radius: 8px;
+	width: 266px;
+	margin-left: 8px;
+	margin-top: 8px;
+	padding: 10px;
+}
+
+.text-courier{
+	font-family: "Courier New", Courier, monospace;
+}
+
+.active-breadcrumb {
+	font-weight: bold;
+	text-decoration: underline;
+}
