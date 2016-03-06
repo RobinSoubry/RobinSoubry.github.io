@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Technical Blog - Week 4 - Introduction to Arrays &amp; Hashes in Ruby</title>
+  <meta charset="UTF-8">
+  <meta name="author" content="Robin Soubry">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/style-blog-index.css">
+</head>
+
+<body>
+  <div id="center-page">
+    <header>
+      <div id="logo" class="float-left">
+        <h1><a href="../index.html">Robin Soubry</a></h1>
+      </div>
+
+      <!--Navigation Bar  (Same on every page)-->
+      <nav class="float-left">
+        <ul>
+          <li><a href="#">About Me</a></li>
+          <li><a href="#">My Work</a></li>
+          <li><a href="#"><span class="active-tab">Blog</span></a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <hr>
+
+  <!--Bread Crums -->
+  <div class="breadcrumbs">
+    <ul>
+      <li><a href="index.html">Blog</a> &gt; &nbsp; </li>
+      <li><a href="#">Software Blog</a> &gt; &nbsp; </li>
+      <li> <a href="#"><span class="active-breadcrumb">Arrays and Hashes</strong></a></li>
+    </ul>
+  </div>
+
+  <div class="clear-float"></div>
+
+  <!-- Subnavigation in blogposts -->
+  <div class="navigation-blogposts">
+    <ul>
+      <li><a href="index.html">Recent Posts</a></li>
+      <li><a href="#">Business Blog</a></li>
+      <li><a href="#"><span class="active-post-tab">Software Blog</span></a></li>
+      <li><a href="#">Adventure Blog</a></li>
+    </ul>
+  </div>
+
+  <div class="clear-float"></div>
+
+  <!--Blogpost CSS Positioning -->
+  <article>
+    <summary>
+          <h1>Arrays &amp; Hashes in Ruby</h1>
+          <h4>March 5<sup>th</sup> 2016</h4>
+          <p>Arrays &amp; Hashes are very powerful Ruby concepts that allow to store and structure data. <br>In this blogpost I will introduce you to these concepts, the differences between them, and when to apply them in your code.</p>
+    </summary>
+
+    <section>
+      <h2>Introduction</h2>
+      <p>
+        Until now, we have used <code>variables</code> to store specific values that we may want to use in our program. For example, you can define a variable that holds the name of your favorite book, and works great if you have only one book to define.<br>
+      </p>
+      <span class ="var"><code>favorite_book = 'Learn to program'</code></span><br>
+      <p>If however you are a big reader and you can't really choose among your favorite books, this becomes very inconvenient:</p>
+      <ul class="example">
+        <li><code>favorite_book_1 = 'Learn to program'</code></li>
+        <li><code>favorite_book_2 = 'The well grounded Rubyist'</code></li>
+        <li><code>favorite_book_3 = 'Eloquent JavaScript'</code></li>
+        <li><code>favorite_book_4 = 'HTML and CSS'</code></li>
+        <li><code>favorite_book_5 = 'JavaScript and JQuery'</code></li>
+      </ul>
+      <p>
+        Not only will you define every favorite book separately, you will also have to call and manipulate each of these books separately, which makes it a very manual, labor intensive process.
+      </p>
+      <p>
+        Ruby has two helpful concepts that allow you to store collections of data: <strong>Arrays</strong> &amp; <strong>Hashes</strong>. As the example below illustrates, both concepts can link a large set of data to one single object.
+      </p>
+      <ul class="example">
+        <li><code><strong>Example Array:</strong> favorite_books = ['Learn to program' , 'The well grounded Rubyist' , 'Eloquent JavaScript' , 'HTML and CSS' , 'JavaScript and JQuery']</code></li>
+        <li><code><strong>Example Hash:</strong> 
+            favorite_books = {<br>
+            'The well grounded Rubyist' => 'Chris Pine' ,<br>
+            'The well grounded Rubyist' => 'David A. Black' ,<br>
+            'Eloquent JavaScript' => 'Marijn Haverbeke' ,<br>
+            'HTML and CSS' => 'John Duckett' ,<br>
+            'JavaScript and JQuery' => 'John Duckett'<br>
+            }
+            </code></li>
+      </ul>
+    </section>      
+
+    <section>
+      <h2>Arrays &amp; Hashes: Syntax and Basic Rules</h2>
+      <p>Both arrays and hashes are collections of data with 'slots' that can point to a specific object. Basically each 'slot' acts like a variable by itself and allows us to group them together.
+      <br>
+      The major difference is that:
+      </p>
+      <ul>
+        <li>
+          <strong>Arrays:</strong> have slots that are sequentially lined up in a numbered way, starting from 0 up to the last element.
+          You can call an element by calling it's index (the number of the slot in which the value is stored).
+          <ul class="example">
+            <li><code><strong>Example Array:</strong> favorite_books = ['Learn to program' , 'The well grounded Rubyist' , 'Eloquent JavaScript' , 'HTML and CSS' , 'JavaScript and JQuery']</code></li>
+            <li>If you want to access the third element in the array, you will call it with <code>favorite_books[2]</code>. This will return value 'Eloquent Javascript'.</li>
+          </ul>
+        </li>
+        <br>
+        <li>
+          <strong>Hashes:</strong> Whereas arrays store only values and assign them to a specific (numbered) slot, hashes use <em>key-value pairs</em>. A 'key' can be any Ruby object, and points to a specific value (just like the index in an array would). Because hashes are not purely based on a sequential, numerical order (indexes), keys have an extra dimension to store structured data: as the example below illustrates, the book is used as a key and refers to a linked author. 
+          <ul class="example">
+            <li><code><strong>Example Hash:</strong> 
+                favorite_books = {<br>
+                'Learn to program' => 'Chris Pine' ,<br>
+                'The well grounded Rubyist' => 'David A. Black' ,<br>
+                'Eloquent JavaScript' => 'Marijn Haverbeke' ,<br>
+                'HTML and CSS' => 'John Duckett' ,<br>
+                'JavaScript and JQuery' => 'John Duckett'<br>
+                }
+                </code>
+            </li>
+            <li>If you want to know the author of 'Eloquent Javascript', you can retrieve it with <code>favorite_books['Eloquent Javascript']</code>. This will return the author 'Marijn Haverbeke'.
+            <li><span>Important Note:</span>Because a key is used to point to a value, it should be unique by definition.</li>
+          </ul>
+        </li>
+      </ul>
+      <p>Following links provide more information about technical implementation of <a href="http://docs.ruby-lang.org/en/2.0.0/Array.html">Arrays</a> and <a href="http://docs.ruby-lang.org/en/2.0.0/Hash.html">Hashes</a>.</p>
+    </section>
+      
+    <section>
+      <h2>Use cases</h2>
+      <p>
+        We have briefly discussed the difference between arrays and hashes and how to use them in a technical way. Because of their distinct way of indexing the values they store they have different applications as well.
+      </p>
+      <img src="../imgs/giovanni.jpg" alt="Pizza Giovanni">
+      <p>
+        Let's have a look at the menu of an Italian restaurant: Giovanni, the chef is a passionate &amp; proud Italian who aims to run his business like a pro!
+      </p>
+
+      <h4>Il 'Array'</h4>
+      <p>
+        Giovanni knows the menu backwards and forwards, and prepares both the orders and check based on the number of the plate (that he knows by heart). His cousin Mario made a basic app for him that uses an <code><strong>array</strong></code> to retrieve the price of each item, by calling it by number.<br>
+        In practice it looks something like this: <code>prezzi = [8.95 , 11.50 , 14.00 , 12.50 , 13.00]</code><br>
+        When Giovanni makes the check for a customer, he will call type in the number of the plate in Mario's array-application, and get the price of the plate back.
+      </p>
+      <p>
+        For example, the price of <em>pizze quattro stagioni</em>, number three on the menu will be called will be called by <code>prezzi [2]</code>.
+      </p>
+      <p>
+        Mario chose to use an Array because Giovanni only needed to know the prices of his dishes, in a specific order. Because Giovanni knows the number of each dish on the menu, he can quickly retrieve the prices by using the number as an index.
+      </p>
+      
+
+      <h4>Il 'Hash'</h4>
+      <p>
+        For the adding a brief description to each plate however, Mario pulled another trick: He created a 'hash' to keep the description and plate well-linked.
+      </p>
+      <p>
+      The tool will look something like this:
+      </p>
+      <p>
+        <code>piatti = {  <br>
+          'Margherita' => 'tomato sauce, mozzarella di bufala, fresh basil', <br>
+          'Il Forno' => 'tomato sauce, spinach-ricotta, olives, onion, mozzarella di bufala', <br>
+          'Quattro Stagioni' => 'tomato sauce, prosciutto, mushrooms, artichokes, mozzarella di bufala', <br>
+          'Salsiccia' => 'tomato sauce, sausage, pepperoni, mushrooms, oregano', <br>
+          'Rustica' => 'sautéed broccoli, hot sausage, soppressata, extra virgin olive oil, parmigiano' <br>
+        }<code>
+      </p>
+      <p>
+        The textual menu has more detailed descriptions, with information that is directly related, one to the other. Therefore Mario chose to use an array for storing this information.
+      </p>
+      <p><em><strong>Sidenote:</strong> <em>We see many ingredients coming back across dishes. Mario could improve his coding by avoiding repetition, and replace each of the ingredient by a unique code. If then, some day Giovanni needs to replace the name of an ingredient, he only needs to do this once instead of in every dish... But we'll cover this in an other blogpost some day. </em></p>
+    </section>      
+  </article>
+
+  <hr>
+
+  <!--Footer Section (Same on every page)-->
+    <footer>
+      <div class="copyright float-left">
+      <p>&copy; Robin Soubry - 2016</p>
+      </div>
+      <div class="social-links float-left">
+        <a href="https://www.instagram.com/robinsoubry/" target="_blank"><img src="http://www.iconsdb.com/icons/preview/black/instagram-xxl.png" alt="Instagram Icon" height="24"></a>
+
+        <a href="https://twitter.com/RSoubry" target="_blank"><img src="https://cdn1.iconfinder.com/data/icons/capsocial/500/twitter-512.png" alt="Twitter Icon" height="24"></a>
+      
+        <a href="https://www.linkedin.com/in/robinsoubry" target="_blank"><img src="http://www.iconsdb.com/icons/preview/black/linkedin-3-xxl.png" alt="LinkedIn Icon" height="24"></a>
+      
+        <a href="https://github.com/RobinSoubry" target="_blank"><img src="http://www.iconsdb.com/icons/preview/black/github-8-xxl.png" alt="GitHub Icon" height="24"></a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
