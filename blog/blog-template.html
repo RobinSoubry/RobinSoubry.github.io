@@ -1,74 +1,92 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>My Blog</title>
-	<meta charset="UTF-8">
-	<meta name="author" content="Robin Soubry">
-	<link rel="stylesheet" type="text/css" href="stylesheets/default.css">
+  <title></title>
+  <meta charset="UTF-8">
+  <meta name="author" content="Robin Soubry">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/style-blog-index.css">
 </head>
 
 <body>
-	<nav>
-		<a href="#">About Me</a>
-		<a href="#">My Work</a>
-		<a href="#">Contact Me</a>
-		<a href="#">Blog</a>
-	</nav>
+  <div id="center-page">
+    <header>
+      <div id="logo" class="float-left">
+        <h1><a href="../index.html">Robin Soubry</a></h1>
+      </div>
 
-	<header>
-		<h1>Blog Post 1</h1>
+      <!--Navigation Bar  (Same on every page)-->
+      <nav class="float-left">
+        <ul>
+          <li><a href="#">About Me</a></li>
+          <li><a href="#">My Work</a></li>
+          <li><a href="#"><span class="active-tab">Blog</span></a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-		<h3>Introduction: Summary of Blog Post Below</h3>
+    <hr>
 
-	</header>
+  <!--Bread Crums -->
+  <div class="breadcrumbs">
+    <ul>
+      <li><a href="index.html">Blog</a> &gt; &nbsp; </li>
+      <li><a href="#">Software Blog</a> &gt; &nbsp; </li>
+      <li> <a href="#"><span class="active-breadcrumb">Blog Title</strong></a></li>
+    </ul>
+  </div>
 
-	<article>
-		<section>
-			<h4>Section Title</h4>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut turpis at ex blandit dictum ac in ante. Fusce pellentesque ultricies velit, eu elementum libero ullamcorper eget. Nam sollicitudin nisi a nunc consectetur commodo. Fusce a justo blandit, commodo ipsum vel, accumsan neque. Morbi a purus libero. Quisque dignissim ex id velit viverra.</p>
-		</section>
-		<section>
-			<h4>Section Title</h4>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut turpis at ex blandit dictum ac in ante. Fusce pellentesque ultricies velit, eu elementum libero ullamcorper eget. Nam sollicitudin nisi a nunc consectetur commodo. Fusce a justo blandit, commodo ipsum vel, accumsan neque. Morbi a purus libero. Quisque dignissim ex id velit viverra.</p>
-		</section>
-	</article>
+  <div class="clear-float"></div>
 
-	<figure>
-		<img src="../imgs/wireframe-blogs.png" />
-	</figure>
-	<figcaption>Caption for the figure</figcaption>
+  <!-- Subnavigation in blogposts -->
+  <div class="navigation-blogposts">
+    <ul>
+      <li><a href="index.html">Recent Posts</a></li>
+      <li><a href="#">Business Blog</a></li>
+      <li><a href="#"><span class="active-post-tab">Software Blog</span></a></li>
+      <li><a href="#">Adventure Blog</a></li>
+    </ul>
+  </div>
 
-	<hr>
+  <div class="clear-float"></div>
 
-	<footer>
-		<a href="mailto:robin.soubry@gmail.com"><img src="https://image.freepik.com/free-icon/new-email-interface-symbol-of-black-closed-envelope_318-62705.jpg" alt="Mail Icon" height="50px" width="50px"></a>
+  <!--Blogpost CSS Positioning -->
+  <article>
+    <h1></h1>
+    <h4>February 13<sup>th</sup> 2016</h4>
+  
+    <p></p>
+    <section>
+      <h2></h2>
+      <p></p>
+      
+    </section>
 
-		<a href="https://www.linkedin.com/in/robinsoubry"><img src="https://image.freepik.com/free-icon/linkedin-logo_318-50643.png" alt="Linkedin Logo" height="50px" width="50px"></a>
+    <section>
+      <h2></h2>
+      <p></p>
+      <p></p>
+    </section>
+  </article>
 
-		<a href="https://www.twitter.com/rsoubry"><img src="https://investor.twitterinc.com/images/ios_homescreen_icon.png" alt="Twitter Logo" height="50px" width="50px"></a>
+  <hr>
 
-	</footer>
+  <!--Footer Section (Same on every page)-->
+    <footer>
+      <div class="copyright float-left">
+      <p>&copy; Robin Soubry - 2016</p>
+      </div>
+      <div class="social-links float-left">
+        <a href="https://www.instagram.com/robinsoubry/" target="_blank"><img src="http://www.iconsdb.com/icons/preview/black/instagram-xxl.png" alt="Instagram Icon" height="24"></a>
 
+        <a href="https://twitter.com/RSoubry" target="_blank"><img src="https://cdn1.iconfinder.com/data/icons/capsocial/500/twitter-512.png" alt="Twitter Icon" height="24"></a>
+      
+        <a href="https://www.linkedin.com/in/robinsoubry" target="_blank"><img src="http://www.iconsdb.com/icons/preview/black/linkedin-3-xxl.png" alt="LinkedIn Icon" height="24"></a>
+      
+        <a href="https://github.com/RobinSoubry" target="_blank"><img src="http://www.iconsdb.com/icons/preview/black/github-8-xxl.png" alt="GitHub Icon" height="24"></a>
+      </div>
+    </footer>
+  </div>
 </body>
-
-<!-- REFLECTION
-How was it to wireframe and create an HTML page with a pair?
-	It was actually fun and inspiring to co-work on a mock-up.
-
-Did you find wireframing to be helpful to your development process?
-	Yes definitely. The wireframe helped to thing in larger skeleton-blocks of code (navigation, article, footer etc) before detailing it down later on. I have the impression that without a mock-up, we would have had the tendency to dive into the code straight away and get lost in desorganisation.
-
-What did you and your pair decide made a good wireframe? 
-	As the goal is to create  template for future blogposts, we defined a generalitic structure that can be reused over and over again, and is yet specific enough to provide details on a wide variety of subjects. For example next to th main article, we will provide an image that can further explain a specific concept.
-	The blogpost itself is also embedded in the larger site as a whole.
-	We could have made some improvements by providing additional context for the reader through breadcrumbs etc.
-
-What new semantic elements did you learn about (if any)?
-	We applied following semantic HTML tags:
-		<nav>: Indication of main navigation links on the site
-		<header>: In the header we wrapped the main title of the blogpost as well as a brief summary.
-		<footer>: The footer holds various links that users often look for, without giving these too much presence on the overall site (ie. links to our social profiles)
-		<figure>: A tag to highlight additional clarification of a concept through a visual image. (Not precisely the same a just a photo) 
-		<figcaption>: A caption that goes together with the figure.
-
 </html>
