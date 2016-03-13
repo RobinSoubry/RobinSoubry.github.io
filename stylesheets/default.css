@@ -47,10 +47,17 @@ a {
 	text-decoration: none;
 }
 
-a:hover{
+a:hover {
 	color: orange;
 }
 
+p > a {
+	color: orange;
+}
+
+p > a:hover {
+	color: gray;
+}
 .active-tab {
 	font-weight: bold;
 	text-decoration: underline;
