@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Robin Soubry - Personal Website</title>
+	<meta charset="UTF-8">
+	<meta name="author" content="Robin Soubry">
+	<link rel="stylesheet" type="text/css" href="stylesheets/default.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/style-index.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/contact.css">
+</head>
+<body background="imgs/background.jpg">
+	<div id="center-page">
+		<header>
+			<div id="logo" class="float-left">
+				<h1><a href="index.html">Robin Soubry</a></h1>
+			</div>
+
+			<!--Navigation Bar  (Same on every page)-->
+			<nav class="float-left">
+				<ul>
+					<li><a href="#">About Me</a></li>
+					<li><a href="#">My Work</a></li>
+					<li><a href="blog/index.html">Blog</a></li>
+					<li><a href="#"><span class="active-tab">Contact</span></a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<div class="clear-float"></div>
+		<hr>
+
+		<main>
+ <div id="trail">
+            <img src="imgs/contact_trail.jpg" alt="Lakeside Cairn" width=100%>
+            <div class="form">
+                <h2>Leave me a trail!</h2>
+                <h4>I would be happy to hear from you!</h4>
+                <form action="MAILTO:robin.soubry@gmail.com" method="post" enctype="text/plain" autocomplete="on">
+
+                        <div class="form_element">
+                            <label for="input-first-name">First Name:</label>
+                            <input id="input-first-name" name="FirstName" type="text" pattern="[A-Za-z].{4,}" title="Only A-Z or a-z and minimal 4 characters" placeholder="First Name" required>
+                            <span></span>
+                        </div>
+
+                        <div class="form_element">
+                            <label for="input-last-name">Last Name:</label>
+                            <input id="input-last-name" name="LastName" type="text" pattern="[A-Za-z].{4,}" title="Only A-Z or a-z and minimal 4 characters" placeholder="Last Name" required>
+                            <span></span>
+                        </div>
+
+                        <div class="form_element">
+                            <label for="input-email">E-mail:</label>
+                            <input id="input-email" type="email" name="e-mail" placeholder="your e-mail" required>
+                            <span></span>
+                        </div>
+
+                        <div class="form_element">	
+                        	<textarea name="Comments" id="commentaar" rows="5" cols="55" placeholder="your comment"></textarea>
+                        </div>
+
+                    	<div>
+	                        <input class="btn" type="submit" value="Send">
+                        	<input class="btn" type="reset" value="Reset">
+                        </div>
+                </form>
+            </div>
+        </div>
+
+		</main>
+
+		<div class="clear-float"></div>
+		
+		<hr>
+
+		<!--Footer Section (Same on every page)-->
+		<footer>
+			<div class="copyright float-left">
+			<p>&copy; Robin Soubry - 2016</p>
+			</div>
+			<div class="social-links float-left">
+				<a href="mailto:robin.soubry@gmail.com?Subject=Hello"><img src="imgs/social_mail.png" alt="Mail Icon" height="24"></a>
+
+				<a href="https://www.facebook.com/robin.soubry/" target="_blank"><img src="imgs/social_facebook.png" alt="Facebook Icon" height="24"></a>
+
+				<a href="https://www.instagram.com/robinsoubry/" target="_blank"><img src="imgs/social_instagram.png" alt="Instagram Icon" height="24"></a>
+
+				<a href="https://twitter.com/RSoubry" target="_blank"><img src="imgs/social_twitter.png" alt="Twitter Icon" height="24"></a>
+			
+				<a href="https://www.linkedin.com/in/robinsoubry" target="_blank"><img src="imgs/social_linkedin.png" alt="LinkedIn Icon" height="24"></a>
+			
+				<a href="https://github.com/RobinSoubry" target="_blank"><img src="imgs/social_github.png" alt="GitHub Icon" height="24"></a>
+			</div>
+		</footer>
+
+	</div>
+</body>
+</html>
