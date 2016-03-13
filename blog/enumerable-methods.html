@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>.group_by - The Art of Clean Up</title>
+  <meta charset="UTF-8">
+  <meta name="author" content="Robin Soubry">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/style-blog-index.css">
+</head>
+
+<body background="../imgs/background.jpg">
+  <div id="center-page">
+    <header>
+      <div id="logo" class="float-left">
+        <h1><a href="../index.html">Robin Soubry</a></h1>
+      </div>
+
+      <!--Navigation Bar  (Same on every page)-->
+      <nav class="float-left">
+        <ul>
+          <li><a href="#">About Me</a></li>
+          <li><a href="#">My Work</a></li>
+          <li><a href="index.html"><span class="active-tab">Blog</span></a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <hr>
+
+  <!--Bread Crums -->
+  <div class="breadcrumbs">
+    <ul>
+      <li><a href="index.html">Blog</a> &gt; &nbsp; </li>
+      <li><a href="software_blog.html">Software Blog</a> &gt; &nbsp; </li>
+      <li> <a href="#"><span class="active-breadcrumb">.group_by - The Art of Clean Up</strong></a></li>
+    </ul>
+  </div>
+
+  <div class="clear-float"></div>
+
+  <!-- Subnavigation in blogposts -->
+  <div class="navigation-blogposts">
+    <ul>
+      <li><a href="index.html">Recent Posts</a></li>
+      <li><a href="#">Business Blog</a></li>
+      <li><a href="software_blog.html"><span class="active-post-tab">Software Blog</span></a></li>
+      <li><a href="#">Adventure Blog</a></li>
+    </ul>
+  </div>
+
+  <div class="clear-float"></div>
+
+  <!--Blogpost CSS Positioning -->
+  <article>
+    <h1>.group_by - The Art of Clean Up</h1>
+    <h4>March 12<sup>th</sup> 2016</h4>
+    <p>You may call the Swiss comedian &amp; artist Ursus Wehrli slightly "compulsary obsessive".</p>
+    <p>
+      He published a photo-book <a href="https://www.ted.com/talks/ursus_wehrli_tidies_up_art?language=en">"The Art of Clean Up"</a> in which he takes everyday objects or life situations and "tidies them up".
+      Ursus has created (and reworked) some great pieces of art, but it took probably hours of dedicated work to get the results he was looking for. If only he had some basic understanding of Ruby's enumerable <code>.group_by</code>.
+    </p>
+    <p>
+      In this blogpost I will introduce you to the <code>.group_by</code> method: a powerful enumerable method to manipulate objects in Ruby.
+    </p>
+
+    <img src="../imgs/Ursus-Wehrli-Art-of-Cleanup.jpg" alt="The Art of Clean Up, by Ursus Wehrli" width="960px">
+
+    <section>
+      <h2>Introduction</h2>
+      <p>
+        The <code>.group_by</code> operation will group all the elements in a "collection object" by something that we want it to group by. As Ursus did in his art, we may want to group the objects based on their color, their size, shape etc. The options are countless!<br>
+        This method excels at tidying up large data-sets. You can probably imagine useful applications of this method in your direct environment:
+        <ul>
+          <li>Grouping all employees in a company per responsible manager</li>
+          <li>Grouping the items in a webshop per logical category (mens, womens, kids etc.)</li>
+          <li>Grouping the invite list per RSVP status</li>
+          <li>Etc.</li>
+        </ul>
+      </p>
+    </section>
+
+    <section>
+      <h2>How it works</h2>
+      <p>
+        The <code>.group_by</code> operation on an enumerable object will group all elements of that object by equal outcomes of a logical test (provided by a code-block) and return a hash.
+        So all object element that return the same value when ran by a code-block will be assigned to the same group. For each "new" outcome, a new hash-key is created to host equal outcomes.
+        <br>
+        <br>
+        The syntax is structured in following way: <code>group_by { |obj| block } → a_hash</code>
+      </p>
+      <p>Some examples:</p>
+      <ul>
+        <li>
+          <strong>Grouping by quotient:</strong><br>
+          <code>(1..6).group_by {|i| i%3}   #=> {0=>[3, 6], 1=>[1, 4], 2=>[2, 5]}</code>
+        </li>
+        <br>
+        <li>
+          <strong>Grouping by first letter:</strong><br>
+          <code>
+            countries = ["United States", "Brazil", "Canada", "Belgium", "Rwanda"]<br>
+            grouped_by_first_letter = countries.group_by { |s| s[0] }<br>
+            #=> {B=>[Belgium, Brazil], C=>[Canada], R=>[Rwanda], U=>[United States]}
+          </code>
+        </li>
+        <br>
+        <li>
+          <strong>Grouping by category:</strong><br>
+          <code>
+          groceries = {<br>
+            "apple"=>"fruit",<br>
+            "lettuce"=>"vegetable",<br>
+            "tomato"=>"vegetable",<br>
+            "pineapple"=>"fruit",<br>
+            "orange"=>"fruit",<br>
+            "banana"=>"fruit",<br>
+            "cucumber"=>"vegetable",<br>
+            "kiwi"=>"fruit"<br>
+          }<br><br>
+          item_by_category = groceries.group_by{|k,v| v}<br><br>
+          #=>{"fruit"=>[["apple", "fruit"], ["pineapple", "fruit"], ["orange", "fruit"], ["banana", "fruit"], ["kiwi", "fruit"]], "vegetable"=>[["lettuce", "vegetable"], ["tomato", "vegetable"], ["cucumber", "vegetable"]]}            
+          </code>
+        </li>
+      </ul>
+    </section>
+  </article>
+
+  <hr>
+
+  <!--Footer Section (Same on every page)-->
+    <footer>
+      <div class="copyright float-left">
+      <p>&copy; Robin Soubry - 2016</p>
+      </div>
+      <div class="social-links float-left">
+        <a href="mailto:robin.soubry@gmail.com?Subject=Hello" class="mail"></a>
+        <a href="https://www.facebook.com/robin.soubry/" target="_blank" class="facebook"></a>
+        <a href="https://www.instagram.com/robinsoubry/" target="_blank" class="instagram"></a>
+        <a href="https://twitter.com/RSoubry" target="_blank" class="twitter"></a>
+        <a href="https://www.linkedin.com/in/robinsoubry" target="_blank" class="linkedin"></a>
+        <a href="https://github.com/RobinSoubry" target="_blank" class="github"></a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
