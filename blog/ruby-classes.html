@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ruby classes: Blueprinting the world around us</title>
+  <meta charset="UTF-8">
+  <meta name="author" content="Robin Soubry">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/style-blog-index.css">
+</head>
+
+<body background="../imgs/background.jpg">
+  <div id="center-page">
+    <header>
+      <div id="logo" class="float-left">
+        <h1><a href="../index.html">Robin Soubry</a></h1>
+      </div>
+
+      <!--Navigation Bar  (Same on every page)-->
+      <nav class="float-left">
+        <ul>
+          <li><a href="../about.html">About Me</a></li>
+          <li><a href="#">My Work</a></li>
+          <li><a href="index.html"><span class="active-tab">Blog</span></a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <hr>
+
+  <!--Bread Crums -->
+  <div class="breadcrumbs">
+    <ul>
+      <li><a href="index.html">Blog</a> &gt; &nbsp; </li>
+      <li><a href="software_blog.html">Software Blog</a> &gt; &nbsp; </li>
+      <li> <a href="#"><span class="active-breadcrumb">Ruby classes: Blueprinting the world around us</strong></a></li>
+    </ul>
+  </div>
+
+  <div class="clear-float"></div>
+
+  <!-- Subnavigation in blogposts -->
+  <div class="navigation-blogposts">
+    <ul>
+      <li><a href="index.html">Recent Posts</a></li>
+      <li><a href="#">Business Blog</a></li>
+      <li><a href="software_blog.html"><span class="active-post-tab">Software Blog</span></a></li>
+      <li><a href="#">Adventure Blog</a></li>
+    </ul>
+  </div>
+
+  <div class="clear-float"></div>
+
+  <!--Blogpost CSS Positioning -->
+  <article>
+    <h1>Ruby classes: Blueprinting the world around us</h1>
+    <h4>March 19<sup>th</sup> 2016</h4>
+    
+    <section>
+      <h2>They all look the same!</h2>
+      <p>
+        If we make some abstraction, many objects around us look the same and have very similar properties or behaviors.
+      </p>
+        <ul>
+          <li>
+            <strong>Computers: </strong>
+            Nearly all computers have an operating system, a processor, memory, a power inlet, a number of usb ports, a screensize etc. Even if we look at their processes, they are very similar: they can startup, run speciic programs, hibernate, shut down etc.<br>
+            <img src="../imgs/comparison-computers.png" alt="Apple product comparison" width="960px">
+            <br>
+            <br>
+          </li>
+          
+          <li>
+            <strong>The animal kingdom: </strong>
+            Since the scientific domain of biology kicked of in the 1800s, scientists have been busy dividing the animal kingdom into classes and subclasses of animals with similar properties and behaviors. Animals we are not familiar with, often look the same to us: whales live in the ocean, they are big, have a typical tailfin etc. but if we look closer, we will notice that one ma be bigger than the other, dive deeper or live in other climates.<br>
+            <img src="../imgs/comparison-whales.jpg" alt="Whales factsheet" width="960px">
+            <br>
+            <br>
+          </li>
+
+          <li>
+            <strong>Computer games: </strong>
+            In games, we love to select avatars, weapons or cars based on their special powers that will allow us to complete our mission. At first sight, all cars have 4 wheels and look suited to do the job. But gamers however will explain you quickly that the top speed, behavior on gravel vs. race tracks etc will make tons of difference.<br>
+            <img src="../imgs/comparison-cars.jpg" alt="Playstation car selection" width="960px">
+            <br>
+          </li>
+        </ul>
+      <p>
+        Humans have a natural tendency to abstract the world around us and classify objects to specific sets of items with similar characteristics or behaviors. These groups of related objects allow us to react faster, without having to observe every single detail about the object.
+      </p>
+      <p>
+        In computer programming, we apply very similar stategies to organize objects and define responses in a structured and efficient way.
+      </p>
+    </section>
+
+    <section>
+      <h2>Ruby Classes - Blueprints for similar objects</h2>
+      <p>
+        A class is a blueprint for objects that have similar characteristics or behaviors.<br>
+        Going back to the example of cars, each of these cars will have an engine, wheels, a top speed, a range etc. the value for these properties may be different, but they all have these values. Similarly, these cars will have common functions that will work in the same way: They can accelerate, drift, brake, crash and so on.
+      </p>
+      <p>
+        As you start developing more complex computer applications, organization will become essential. You don't want to create thousands of methods and variables to do similar or overlapping things. As a programmer, you want at all times to minimize repitition and reuse code. <em>If you need to call the same method on a bunch of similar objects, it probably makes more sense to create a class.</em>
+      </p>
+    </section>
+
+    <section>
+      <h2>So how does it work?</h2>
+      <p>Ruby classes are pretty straightforward to create:</p>
+        <ul>
+          <li>
+            You create a new class by calling the keyword "class" + "ClassName". The names of classes are written in <em>'CamelCase'</em>, unlike variables or objects, which are named in <em>'snake_case'</em>.
+          </li>
+          <br>
+          <li>
+            If you create a new object within this new class, you can predefine a set of characteristics that will be <em>initialized</em> with the arguments you pass allong during the creation of the class. In the example of cars, below you can add a new car to the application by calling:<br>
+            <code>
+              car_no_9 = Cars.new(Maserati, Ghibli SS, 2013, V6 Twin Turbo, 330 bhp, 550 Nm, 1800kg, 15 MPG, 550 Miles)
+            </code>
+          </li>
+          <br>
+          <li>
+            <strong>Instance Variables (@): </strong>So far, we have created and used variables within a local method. These <em>'local variables'</em> are specific to the method and can not be accessed outside of it. This is impractical if for example we want to call a method "accelerate" that will calculate the acceleration, based on the engine power, torque and maybe some other variables… We have already specified several variables when we added the car to the collection. To use these values, we can use <em>'instance variables'</em>. These variables are tied to an object and are accessible to all methods within the same class. Instance variables are identified with the @-symbol as a prefix to the variable-name.
+          </li>
+          <br>
+          <li>
+            <strong>Instance Methods:</strong> Classes share their methods, so it is easy to chain methods together that belong to the same class.
+          </li>
+          <br>
+          <li>
+            Many objects (instances) can belong to the same class. Each of these objects will have access to the same 'instance variables' and 'instance methods', but the values will be unique for each of the objects that belong to the class. This allows us to configure very unique cars, based on the same template.
+          </li>
+        </ul>
+      <p>
+      </p>
+
+      <code>
+        class Cars<br>
+          &nbsp;&nbsp; def initialize (brand, model, year, engine_type, horsepower, max_power, max_torque, weight, avg_fuel_comsumption, range)<br>
+            &nbsp;&nbsp;&nbsp;&nbsp; @brand = brand<br>
+            &nbsp;&nbsp;&nbsp;&nbsp; @model = model<br>
+            &nbsp;&nbsp;&nbsp;&nbsp; @year = year<br>
+            &nbsp;&nbsp;&nbsp;&nbsp; @engine_type = engine_type<br>
+            &nbsp;&nbsp;&nbsp;&nbsp; @horsepower = horsepower<br>
+            &nbsp;&nbsp;&nbsp;&nbsp; @max_power = max_power<br>
+            &nbsp;&nbsp;&nbsp;&nbsp; @max_torque = max_torque<br>
+            &nbsp;&nbsp;&nbsp;&nbsp; @weight = weight<br>
+            &nbsp;&nbsp;&nbsp;&nbsp; @avg_fuel_consumption = avg_fuel consumption<br>
+            &nbsp;&nbsp;&nbsp;&nbsp; @range = range<br>
+          &nbsp;&nbsp;end<br>
+          <br>
+          &nbsp;&nbsp; def start_engine <br>
+          &nbsp;&nbsp;&nbsp;&nbsp; #Your code<br>
+          &nbsp;&nbsp; end<br>
+          <br>
+          &nbsp;&nbsp; def accelerate <br>
+          &nbsp;&nbsp;&nbsp;&nbsp; #Code using @horsepower, @max_torque, @weight and many other variables<br>
+          &nbsp;&nbsp; end<br>          
+          <br>
+          &nbsp;&nbsp; def drift <br>
+          &nbsp;&nbsp;&nbsp;&nbsp; #Your code<br>
+          &nbsp;&nbsp; end<br> 
+      </code>
+
+    </section>
+
+
+
+  </article>
+
+  <hr>
+
+  <!--Footer Section (Same on every page)-->
+    <footer>
+      <div class="copyright float-left">
+      <p>&copy; Robin Soubry - 2016</p>
+      </div>
+      <div class="social-links float-left">
+        <a href="mailto:robin.soubry@gmail.com?Subject=Hello" class="mail"></a>
+        <a href="https://www.facebook.com/robin.soubry/" target="_blank" class="facebook"></a>
+        <a href="https://www.instagram.com/robinsoubry/" target="_blank" class="instagram"></a>
+        <a href="https://twitter.com/RSoubry" target="_blank" class="twitter"></a>
+        <a href="https://www.linkedin.com/in/robinsoubry" target="_blank" class="linkedin"></a>
+        <a href="https://github.com/RobinSoubry" target="_blank" class="github"></a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
