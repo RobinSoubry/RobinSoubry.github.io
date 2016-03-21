@@ -1,0 +1,51 @@
+.rnd-thumbs{
+    padding-left: 5px;
+}
+
+.thumbs-person{
+    list-style-image: url("../imgs/thumbs_personx.png");
+}
+
+.thumbs-location{
+    list-style-image: url("../imgs/thumbs_location.png");
+}
+
+.thumbs-education{
+    list-style-image: url("../imgs/thumbs_education.png");
+}
+
+.thumbs-skills{
+    list-style-image: url("../imgs/thumbs_gear.png");
+}
+
+.thumbs-language{
+    list-style-image: url("../imgs/thumbs_languages.png");
+}
+
+.thumbs-coding{
+    list-style-image: url("../imgs/thumbs_coding.png");
+}
+
+.thumbs-graphic{
+    list-style-image: url("../imgs/thumbs_graphic_design.png");
+}
+
+.thumbs-hobbies{
+    list-style-image: url("../imgs/thumbs_hobbies.png");
+}
+
+.gray_blue{
+	color: #0099cc;
+}
+
+.profile{
+	width: 660px;
+}
+
+ul>li>h2 {
+	margin-bottom: 0px;
+}
+
+ul>li>p {
+	margin-top: 0px;
+}
