@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Looping: Ruby vs. JavaScript</title>
+  <meta charset="UTF-8">
+  <meta name="author" content="Robin Soubry">
+  <link rel="shortcut icon" type="image/png" href="../imgs/favicon.png"/>
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/style-blog-index.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/table.css">
+</head>
+
+<body background="../imgs/background.jpg">
+  <div id="center-page">
+    <header>
+      <div id="logo" class="float-left">
+        <h1><a href="../index.html">Robin Soubry</a></h1>
+      </div>
+
+      <!--Navigation Bar  (Same on every page)-->
+      <nav class="float-left">
+        <ul>
+          <li><a href="../about.html">About Me</a></li>
+          <li><a href="../projects/index.html">Projects</a></li>
+          <li><a href="index.html"><span class="active-tab">Blog</span></a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <hr>
+
+  <!--Bread Crums -->
+  <div class="breadcrumbs">
+    <ul>
+      <li><a href="index.html">Blog</a> &gt; &nbsp; </li>
+      <li><a href="software_blog.html">Software Blog</a> &gt; &nbsp; </li>
+      <li> <a href="#"><span class="active-breadcrumb">Looping: Ruby vs. JavaScript</strong></a></li>
+    </ul>
+  </div>
+
+  <div class="clear-float"></div>
+
+  <!-- Subnavigation in blogposts -->
+  <div class="navigation-blogposts">
+    <ul>
+      <li><a href="index.html">Recent Posts</a></li>
+      <li><a href="business_blog.html">Business Blog</a></li>
+      <li><a href="software_blog.html"><span class="active-post-tab">Software Blog</span></a></li>
+      <li><a href="adventure_blog.html">Adventure Blog</a></li>
+    </ul>
+  </div>
+
+  <div class="clear-float"></div>
+
+  <!--Blogpost CSS Positioning -->
+  <article>
+    <h1>Looping: Ruby vs. JavaScript</h1>
+    <h4>March 27<sup>th</sup> 2016</h4>
+    
+    <section>
+      <h2>Keep on running…</h2>
+      <p>
+        Iterations are an essential component of computer applications. With some abstractio, we can model numerous real-life situations to iterations. A rather obvious example is a runner competing for the Olympic 10K medal.
+        To run 10K, the runner will need to run 25 laps of 400m each.
+      </p>
+      <img src="../imgs/runners.jpg" alt="Runners on athletic track" width="960px">
+
+      <p>
+        In the examples below, you will find that both languages are capable of coming to the same result, only with a different syntax:
+      </p>
+      <ul>
+        <li><strong>Ruby:</strong></li>
+        <ul>
+          <li>
+            <code>
+              25.times do |i|<br>
+              &nbsp;&nbsp;puts (i + 1)*400<br>
+              end
+            </code>
+          </li>
+          <li>
+            Ruby is a langage that is driven by readability for the programmer. The language has numerous built-in methods that are easy to understand, write or read, but that will in the background do the work.
+          </li>
+        </ul>
+        <li><strong>JavaScript:</strong></li>
+        <ul>
+          <li>
+            <code>
+              for (var i = 1; i < 25; i++) {<br>
+              &nbsp;&nbsp;console.log(i*400);<br>
+              }
+            </code>
+          </li>
+          <li>
+            JavaScript on the other hand is focused on computer performance rather than readability. As a result, this language has much less built-in methods and required developers to design the logic from scratch in a very explicit way.
+          </li>
+        </ul>
+      </ul>
+    </section>
+
+    <section>
+      <h2>So how does it work?</h2>
+      <p>
+        Basically both iterations have the same end result, but follow a different path to get there. They both have however <strong>three</strong> essential components in their syntax:
+        <ul>
+          <li><strong>State:</strong> The current state of the variable.</li>
+          <li><strong>Condition:</strong> A condition, related to the iteration. A new iteration will be started IF the statement evaluates to true.</li>
+            <ul>
+              <li>Be careful not to create an infinite loop (a statement that will always evaluate to true)</li>
+            </ul>
+          <li><strong>Iterator:</strong> Defines how to change the variable with each iteration. This is often used to break the looping and avoid an infinite loop.</li>
+        </ul>
+      </p>
+      <p>A quick overview:</p>
+      <table>
+        <tr>
+          <th></th>
+          <th>Ruby</th>
+          <th>JavaScript</th>
+          <th>Comment</th>
+        </tr>
+        <tr>
+          <td>State</td>
+          <td><code>i = 0</code></td>
+          <td><code>var i = 1</code></td>
+          <td>Ruby's variable value starts at zero (0) by defaut wheras in JavaScript, these variables are often initiated with 1</td>
+        </tr>
+        <tr>
+          <td>Condition</td>
+          <td><code>i 25 </code></td>
+          <td><code>i < 25</code></td>
+          <td>In Ruby, you will iterate '25' times. In JavaScript, you will have to explicitly say that i cannot go above the number of iterations</td>
+        </tr>
+        <tr>
+          <td>Iterator</td>
+          <td><code>.times</code></td>
+          <td><code>i++</code></td>
+          <td>In Ruby, you will iterate a number of 'times'. Behind the scenes, Ruby will translate this easy keyword to computer language. In JavaScript, you keep explicitly track of how you want to iterate. This allows more freedom to define the iteration (ie. if you want to skip some rounds etc.)</td>
+        </tr>
+      </table>
+    </section>
+  </article>
+
+  <hr>
+
+  <!--Footer Section (Same on every page)-->
+    <footer>
+      <div class="copyright float-left">
+      <p>&copy; Robin Soubry - 2016</p>
+      </div>
+      <div class="social-links float-left">
+        <a href="mailto:robin.soubry@gmail.com?Subject=Hello" class="mail"></a>
+        <a href="https://www.facebook.com/robin.soubry/" target="_blank" class="facebook"></a>
+        <a href="https://www.instagram.com/robinsoubry/" target="_blank" class="instagram"></a>
+        <a href="https://twitter.com/RSoubry" target="_blank" class="twitter"></a>
+        <a href="https://www.linkedin.com/in/robinsoubry" target="_blank" class="linkedin"></a>
+        <a href="https://github.com/RobinSoubry" target="_blank" class="github"></a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
