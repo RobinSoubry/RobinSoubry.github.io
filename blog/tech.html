@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The Big-o-notation - Quantifying complexity of algorithms</title>
+  <meta charset="UTF-8">
+  <meta name="author" content="Robin Soubry">
+  <link rel="shortcut icon" type="image/png" href="../imgs/favicon.png"/>
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/style-blog-index.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/table.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/table-tech-post.css">
+</head>
+
+<body background="../imgs/background.jpg">
+  <div id="center-page">
+    <header>
+      <div id="logo" class="float-left">
+        <h1><a href="../index.html">Robin Soubry</a></h1>
+      </div>
+
+      <!--Navigation Bar  (Same on every page)-->
+      <nav class="float-left">
+        <ul>
+          <li><a href="../about.html">About Me</a></li>
+          <li><a href="../projects/index.html">Projects</a></li>
+          <li><a href="index.html"><span class="active-tab">Blog</span></a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <hr>
+
+  <!--Bread Crums -->
+  <div class="breadcrumbs">
+    <ul>
+      <li><a href="index.html">Blog</a> &gt; &nbsp; </li>
+      <li><a href="software_blog.html">Software Blog</a> &gt; &nbsp; </li>
+      <li> <a href="#"><span class="active-breadcrumb">The Big-o-notation - Quantifying complexity of algorithms</strong></a></li>
+    </ul>
+  </div>
+
+  <div class="clear-float"></div>
+
+  <!-- Subnavigation in blogposts -->
+  <div class="navigation-blogposts">
+    <ul>
+      <li><a href="index.html">Recent Posts</a></li>
+      <li><a href="business_blog.html">Business Blog</a></li>
+      <li><a href="software_blog.html"><span class="active-post-tab">Software Blog</span></a></li>
+      <li><a href="adventure_blog.html">Adventure Blog</a></li>
+    </ul>
+  </div>
+
+  <div class="clear-float"></div>
+
+  <!--Blogpost CSS Positioning -->
+  <article>
+    <h1>The Big-o-notation - Quantifying complexity of algorithms</h1>
+    <h4>April 1<sup>st</sup> 2016</h4>
+  
+    <section>
+      <h2>But it started simple…</h2>
+      <p>
+        As a programmer it is important to understand the impact of the algorithms you write.
+        Simple logic may work well with limited datasets but can grow into a sluggish mess when working with larger datasets… The <strong>'big-o-notation'</strong> enhances the programmer's awareness of the complexity his/her algorithms may create in <strong>worst case scenario's</strong>.
+      </p>
+      <img src="../imgs/multi-bunnies.jpg" alt="Bunny multiplication cartoon" width="960px">
+    </section>
+
+    <section>
+      <h2>The Big-O-Notation</h2>
+      <p>
+        The big-o-notation is a way to measure how well an algorithm scales as the amount of data involved increases.
+        In sum: <em>"How well will the algorithm behave with an array of 10 elements compared to an array of 10,000 elements?"</em><br>
+        In such kind of notation, you will want to look at the <strong>worst possible outcome</strong> of your algorithm in order to identify (and optimize!) the bottlenecks in your code.<br>
+      </p>
+    </section>
+
+    <section>
+      <h2>Different kinds of efficiency</h2>
+      <p>
+        In programming, there are often many ways to obtain a same outcome. In practice however your code is interpreted by the parser of your computer language and translated to binary calculations on the computer's processor. So as you may have guessed, each way of programming something will require different amounts of processing capacity. The big-o-notation classifies algorithms in 8 different categories of complexity:
+      </p>
+      <br>
+
+<br><br>
+
+
+      <table>
+        <tr>
+          <th>
+            Notation<br>
+            <em>(Most Efficient > Least efficient)</em>
+          </th>
+          <th>Description</th>
+          <th>Example</th>
+          <th>Order (N = 100)</th>
+        </tr>
+        <tr>
+          <td>O(1)</td>
+          <td>Time to complete is a constant</td>
+          <td>Adding an element to an array: regardless of how many elements are already in the array, the time to complete is always the same</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>O(log N)</td>
+          <td>The time to complete is logarithmic</td>
+          <td>A binary search: For every search, the amount of data is halved, which makes it very efficient</td>
+          <td>6.64</td>
+        </tr>
+        <tr>
+          <td>O(N)</td>
+          <td>Time to complete is in direct proportaion to the amount of data</td>
+          <td>
+            Linear search: Look in <em>each</em> element in the array<br>
+            <em>Because the big-o-notation searches for the worst possible outcome, it will consider each and every element in the array, not only the first match-case!</em>
+          </td>
+          <td>100</td>
+        </tr>
+        <tr>
+          <td>O(N log N)</td>
+          <td>log-linear: The log of N, multiplied by N. The time to complete is quasi-linear</td>
+          <td>
+            A typical example is a quicksort of the elements in a collection.<br>
+            <em>This number of comparisons equals log n! = log n + log(n-1) + log(n-2) + … + log(1) = n log n</em>
+          </td>
+          <td>664</td>
+        </tr>
+        <tr>
+          <td>
+            O(N<sup>2</sup>)<br>
+            (quadratic)
+          </td>
+          <td>Time to complete is the square to the amount of data.</td>
+          <td>A nested for-loop (2x)<br>
+            <code>for (… in …){<br>
+            &nbsp;&nbsp;for (… in …){<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;//your code<br>
+            &nbsp;&nbsp;  }<br>
+            }</code>
+          </td>
+          <td>10,000</td>
+        </tr>
+        <tr>
+          <td>O(N<sup>3</sup>)</td>
+          <td>Time to complete is the amount of data to the power of three.</td>
+          <td>
+            A nested for-loop (3x)<br>
+            <code>for (… in …){<br>
+            &nbsp;&nbsp;for (… in …){<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;for (… in …){<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//your code<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+            &nbsp;&nbsp;  }<br>
+            }</code>
+          </td>
+          <td>100,000</td>
+        </tr>
+        <tr>
+          <td>
+            O(2<sup>N</sup>)<br>
+            exponential
+          </td>
+          <td>The time to complete is exponential: If there are two solutions per element, the time to complete will be two to the power of N </td>
+          <td>
+            Solving the <a href="https://en.wikipedia.org/wiki/Travelling_salesman_problem">travelling salesman problem</a> with dynamic programming (<a href="https://en.wikipedia.org/wiki/Dynamic_programming"> a method for solving a complex problem by breaking it down into a collection of simpler subproblems, solving each of those subproblems just once, and storing their solutions for later use</a>)
+          </td>
+          <td>1,267,650,600,228,230,000,000,000,000,000</td>
+        </tr>
+        <tr>
+          <td>O(N!)</td>
+          <td>Factorial: The time to complet becomes very big very quickly</td>
+          <td>
+            Solving the <a href="https://en.wikipedia.org/wiki/Travelling_salesman_problem">travelling salesman problem</a> with brute-force search (<a href="https://en.wikipedia.org/wiki/Brute-force_search">a very general problem-solving technique that consists of systematically enumerating all possible candidates for the solution and checking whether each candidate satisfies the problem's statement</a>)
+          </td>
+          <td>93,326,215,443,944,200,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000</td>
+        </tr>
+      </table>
+
+      <br>
+      <img src="../imgs/big-o-notation.png" alt="Big-o-notation graph" width="690px">
+
+      <br>
+      <p>
+        Just to give you an idea… If the numbers in the table represent seconds, you would be able to:
+      </p>
+        <ul>
+          <li><strong>O(1):</strong> Count to one</li>
+          <li><strong>O(log N):</strong> Go from 0 to 60 mph in 6.64 seconds BMW 325 sport edition.</li>
+          <li><strong>O(N log N):</strong> Hard-cook an egg in a bit more than 11 minutes.</li>
+          <li><strong>O(N<sup>2</sup>):</strong> Watch the Martian in 2 hours and 46 minutes.</li>
+          <li><strong>O(N<sup>3</sup>):</strong> Watch the whole Harry Potter collection in 19h 47m (and have time to nap 8 hours).</li>
+          <li><strong>O(2<sup>N:</strong> The time between today and the creation of the Earth approx. 4.02 Bn years ago… <strong>A trillion times!</strong></li>
+          <li><strong>O(N!):</strong> Euuhm… You get the picture right?</li>
+        </ul>
+      <p>
+        Fortunately, modern day personal computers often have multiple processors that are capable to perfom 2-3 million calculations per second (GHz), so we won't have to wait for eternity to load a page or run our programs.
+      </p>
+      <p>
+        Even if according to Moore's law, coputer powers doubles nearly every two years, it is advisable to think about efficiency of the algorithms you design… Especially if you intend to build successful applications that process data for many users!
+      </p>
+    </section>
+
+    <section>
+      <h2>References</h2>
+      <ul>
+        <li><a href="http://web.mit.edu/16.070/www/lecture/big_o.pdf">MIT Lecture on big-O-notations</a></li>
+        <li><a href="https://www.youtube.com/watch?v=N5_sTEhnZKM">Big-O-notations explained by Apple Juice Teaching</a></li>
+        <li><a href="https://www.youtube.com/watch?v=V6mKVRU1evU">Big-O-notations by Derek Banas</a></li>
+      </ul>
+    </section>
+  </article>
+
+  <hr>
+
+  <!--Footer Section (Same on every page)-->
+    <footer>
+      <div class="copyright float-left">
+      <p>&copy; Robin Soubry - 2016</p>
+      </div>
+      <div class="social-links float-left">
+        <a href="mailto:robin.soubry@gmail.com?Subject=Hello" class="mail"></a>
+        <a href="https://www.facebook.com/robin.soubry/" target="_blank" class="facebook"></a>
+        <a href="https://www.instagram.com/robinsoubry/" target="_blank" class="instagram"></a>
+        <a href="https://twitter.com/RSoubry" target="_blank" class="twitter"></a>
+        <a href="https://www.linkedin.com/in/robinsoubry" target="_blank" class="linkedin"></a>
+        <a href="https://github.com/RobinSoubry" target="_blank" class="github"></a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
