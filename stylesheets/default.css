@@ -1,7 +1,7 @@
 /*The Default stylesheet will be applied to all the pages on the website, and includes repetitive elements, classes or ids. */
 
 
-h1, h2, h3, h4, h5, h6, p, li, a {
+h1, h2, h3, h4, h5, h6, p, li, a, dl {
 	font-family: helvetica, arial;
 }
 
