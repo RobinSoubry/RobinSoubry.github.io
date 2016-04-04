@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SQL - Overview and command cheat sheet</title>
+  <meta charset="UTF-8">
+  <meta name="author" content="Robin Soubry">
+  <link rel="shortcut icon" type="image/png" href="../imgs/favicon.png"/>
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/style-blog-index.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/table.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/table-tech-post.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/projects.css">
+</head>
+
+<body background="../imgs/background.jpg">
+  <div id="center-page">
+    <header>
+      <div id="logo" class="float-left">
+        <h1><a href="../index.html">Robin Soubry</a></h1>
+      </div>
+
+      <!--Navigation Bar  (Same on every page)-->
+      <nav class="float-left">
+        <ul>
+          <li><a href="../about.html">About Me</a></li>
+          <li><a href="index.html"><span class="active-tab">Projects</span></a></li>
+          <li><a href="../blog/index.html">Blog</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <hr>
+
+  <!--Bread Crums -->
+  <div class="breadcrumbs">
+    <ul>
+      <li><a href="index.html">Projects</a> &gt; &nbsp; </li>
+      <li><a href="software_projects.html">Software Projects</a> &gt; &nbsp; </li>
+      <li> <a href="#"><span class="active-breadcrumb">SQL - Overview and command cheat sheet</strong></a></li>
+    </ul>
+  </div>
+
+  <div class="clear-float"></div>
+
+  <!-- Subnavigation in blogposts -->
+  <div class="navigation-blogposts">
+    <ul>
+      <li><a href="index.html">Recent Projects</a></li>
+      <li><a href="business_projects.html">Business Projects</a></li>
+      <li><a href="software_projects.html"><span class="active-post-tab">Software Projects</span></a></li>
+      <li><a href="adventure_projects.html">Adventure Projects</a></li>
+    </ul>
+  </div>
+
+  <div class="clear-float"></div>
+
+  <!--Blogpost CSS Positioning -->
+  <article>
+  	<img class="banner" src="../imgs/project_banner_database.jpg" alt="Database graph" width="960px">
+  	<div id="title-date-overlay">
+	    <h1>SQL - Overview and command cheat sheet</h1>
+	    <h4>April 2<sup>nd</sup> 2016</h4>
+    </div>
+
+    <section>
+      	<h2>Introduction to SQL and Databases</h2>
+      	<dl>
+	  		<dt>SQL (Structured Query Language)</dt>
+	  			<dd>SQL is a programming language that is designed to manage data, stored in relational databases. By using simple, declarative statements a programmer can access, add or modify data in tables.</dd>
+	  		<dt>Relational Databases</dt>
+	  			<dd>
+	  				Relational databases structure information in one or more 'related' tables that consist of rows and columns<br>
+	  				A <em>column</em> is a set of data values of a particular type <em>(ie. a user id, age, name, etc.)</em><br>
+	  				A <em>row</em> is a single record in a table <em>(ie. A user)</em>
+	  			</dd>
+		</dl>
+      <p>
+         In order to make the database 'fool-proof' and avoid pollution of the data, various checks and enforcements can and should be applied. When designing a database, you can for example specify the datatype of each column and require any input to meet that datatype:
+         <ul>
+         	<li>Integer</li>
+         	<li>Text (strings)</li>
+         	<li>Date (YYYY-MM-DD)</li>
+         	<li>REAL (Decimals</li>
+         	<li>NULL (empty values)</li>
+         </ul>
+      </p>      
+    </section>
+
+    <section>
+    	<h2>Basic table manipulations</h2>
+    	<p></p>
+    			<table>
+	        <tr>
+	          <th>Notation</th>
+	          <th>Description</th>
+	          <th>Example</th>
+	        </tr>
+	        <tr>
+	          <td>CREATE TABLE</td>
+	          <td>
+	          	Clause that triggers the creation of a new table. When using this clause, you must name the table and specify the different columns and their respective datatypes as arguments
+	          </td>
+	          <td>
+	          	<code><strong>CREATE TABLE</strong> table_name (<br>
+	          	&nbsp;&nbsp;column_1 datatype,<br>
+	          	&nbsp;&nbsp;column_2 datatype,<br>
+	          	&nbsp;&nbsp;column_3 datatype<br>
+	          	);</code><br>
+	          </td>
+	        </tr>
+
+	       	<tr>
+	          <td>ALTER TABLE</td>
+	          <td>
+	          	ALTER TABLE is a statement that let's you make specific changes to the table. With this statement you can add, modify or remove column structures (or requirements) in the table.
+	          </td>
+	          <td>
+	          	<code><strong>ALTER TABLE</strong> table ADD COLUMN column_name DATATYPE</code>
+	          </td>
+	        </tr>
+	       	
+	       	<tr>
+	          <td>INSERT INTO</td>
+	          <td>Clause that adds specified rows into the table. This clause takes as many arguments as there are columns in the table.</td>
+	          <td>
+	          	<code><strong>INSERT INTO</strong> table (value_1, value_2, value_3);</code></td>
+	        </tr>
+	        <tr>
+	          <td>UPDATE</td>
+	          <td>
+	          	UPDATE is a clause that edits the row in a table. The update operator is used in combination with the keyword 'SET' and a condition (to select which rows to update)
+	          </td>
+	          <td>
+	          	<code><strong>UPDATE</strong> table SET column = value WHERE condition;</code>
+	          </td>
+	        </tr>
+
+	       	<tr>
+	          <td>DELETE FROM</td>
+	          <td>
+	          	DELETE FROM is a statement that let's you delete one or more rows from the table. You must however specify which entries to delete with a conditional statement WHERE.
+	          </td>
+	          <td>
+	          	<code><strong>DELETE FROM</strong> table WHERE column CONDITION</code>
+	          </td>
+	        </tr>
+        </table>
+    </section>
+
+    </section>
+
+	<section>
+    	<h2>Basic SQL queries</h2>
+    	<p>SQL queries communicate with a database to retrieve information.</p>
+		<table>
+	        <tr>
+	          <th>Notation</th>
+	          <th>Description</th>
+	          <th>Example</th>
+	        </tr>
+	        <tr>
+	          <td>SELECT</td>
+	          <td>SELECT is a clause that indicates a query</td>
+	          <td>
+	          	<code><strong>SELECT</strong> column FROM table;</code><br>
+	          </td>
+	        </tr>
+	       	
+	       	<tr>
+	          <td>FROM</td>
+	          <td>FROM clause indicates in which table(s) will be searched</td>
+	          <td>
+	          	<code>SELECT column <strong>FROM</strong> table;</code></td>
+	        </tr>
+	        <tr>
+	          <td>DISTINCT</td>
+	          <td>
+	          	SELECT DISTINCT returns unique values for specified columns
+	          </td>
+	          <td>
+	          	<code>SELECT <strong>DISTINCT</strong> column FROM table;</code>
+	          </td>
+	        </tr>
+
+	        <tr>
+	          <td>WHERE</td>
+	          <td>
+	          	WHERE is a clause that indicates a filter on the result. Only the rows where the condition(s) return 'true' are retained.
+	          </td>
+	          <td>
+	          	<code>SELECT column FROM table <strong>WHERE</strong> (condition_column + condition);</code><br><br>
+	          	Example: Select everything in a table called 'movies' where the entry has a rating of more than 8:<br><code>SELECT * FROM movies WHERE rating > 8;</code>
+	          </td>
+	        </tr>
+
+	       	<tr>
+	          <td>LIKE</td>
+	          <td>
+	          	LIKE is a special operator to compare similar values and identify patterns.<br><br>
+	          	The LIKE statement is to be used in combination with the WHERE clause.
+	          </td>
+	          <td>
+	          	<code>SELECT column FROM table WHERE column <strong>LIKE</strong> 'pattern';</code><br><br>
+	          	Example: Select everything in a table called 'movies' where the name is related to 'Se_en'. The _ will be replaced by any possible character and return the entrie that match the pattern. For example 'Seven' and 'Se7en' are both valid movies.<br>
+	          	<code>SELECT * FROM movies WHERE name LIKE 'Se_en';</code><br><br>
+	          	The '_' is a wildcard (more info below)
+	          </td>
+	        </tr>
+
+	        <tr>
+	          <td>BETWEEN</td>
+	          <td>
+	          	BETWEEN filters results, based on a specific range of alphanumerical characters<br><br>
+ 				The BETWEEN statement is to be used in combination with the WHERE clause.
+	          </td>
+	          <td>
+	          	<code>SELECT * FROM table WHERE column <strong>BETWEEN</strong> start_value AND end_value;</code>
+	          	Example: Select everything in a table called 'movies' where the release year is between 1990 and 2000.<br>
+	          	<code>SELECT * FROM movies WHERE year BETWEEN 1990 AND 2000;</code>
+	          </td>
+	        </tr>
+
+	       	<tr>
+	          <td>AND</td>
+	          <td>
+	          	AND is an operator that combines two or more conditions. All conditions must be 'true' for the entry to be retained in the result list<br>
+	          </td>
+	          <td>
+	          	<code>SELECT column FROM table WHERE condition_a <strong>AND</strong> condition_b;</code><br><br>
+	          	Example: Select all movies of a specific genre within a specific time-period.<br>
+	          	<code>SELECT * FROM movies WHERE year BETWEEN 1990 AND 2000 AND genre = 'comedy';</code>
+	          </td>
+	        </tr>
+
+	       	<tr>
+	          <td>OR</td>
+	          <td>
+	          	OR is an operator that filters the result list on multiple conditions. All entries for which either condition returns 'true' is retained.<br>
+	          </td>
+	          <td>
+	          	<code>SELECT column FROM table WHERE condition_a <strong>OR</strong> condition_b;</code><br><br>
+	          	Example: Select all movies of a specific genre OR a specific time-period.<br>
+	          	<code>SELECT * FROM movies WHERE year BETWEEN 1990 AND 2000 OR genre = 'comedy';</code>
+	          </td>
+	        </tr>
+
+	       	<tr>
+	          <td>ORDER BY</td>
+	          <td>
+	          	ORDER BY is a sorting operator that orders on an alpha-numerical order. You can chose either an ascending order (ASC) or descending order (DESC).<br>
+	          </td>
+	          <td>
+	          	<code>SELECT column FROM table <strong>ORDER BY</strong> order_column ASC;</code><br><br>
+	          	Example: Return all the movies from highest to lowest rating.<br>
+	          	<code>SELECT * FROM movies ORDER BY rating DESC;</code>
+	          </td>
+	        </tr>
+
+	       	<tr>
+	          <td>LIMIT</td>
+	          <td>
+	          	LIMIT specifies the maximal number of rows to display in the result list.<br>
+	          </td>
+	          <td>
+	          	<code>SELECT column FROM table LIMIT 10;</code><br><br>
+	          	Example: Select the top ten 'best rated' of movies.<br>
+	          	<code>SELECT * FROM movies ORDER BY rating DESC LIMIT 10;</code>
+	          </td>
+	        </tr>
+        </table>
+    </section>
+
+	<section>
+    	<h2>Aggregate functions in SQL</h2>
+    	<p>
+    		Aggregate functions compute a single result from a set of input values (that are retrieved from a query). For example taking the average of all the values in a column.
+    	</p>
+    	<p>
+    		Aggregate functions are very useful to transform the data in the exact format you want to use in the client-side application. By processing the raw data at the source, to the 'right' structure you can save a lot of bandwith and optimize the use of computing power.
+    	</p>
+    	<table>
+	        <tr>
+	          <th>Notation</th>
+	          <th>Description</th>
+	          <th>Example</th>
+	        </tr>
+	        <tr>
+	          <td>COUNT()</td>
+	          <td>COUNT() returns the number of rows for which the value is not NULL</td>
+	          <td>
+	          	<code>SELECT COUNT(*) FROM table;</code><br>
+	          	The returned value will be considered as a data-element for the SELECT statement.<br>
+	          </td>
+	        </tr>
+	       	
+	       	<tr>
+	          <td>GROUP BY()</td>
+	          <td>
+	          	GROUP BY() arranges identical data in groups<br>
+	          	The GROUP BY () command is used in the context of SELECT and is always used in combination with an aggregate function <em>such as COUNT()</em><br>
+	          	It's helpful to also SELECT the column you pass as an argument to GROUP BY ()!
+	          </td>
+	          <td>
+	          	<code>SELECT parameter, COUNT(*) FROM table GROUP BY parameter;</code><br>
+	          	A typical use would be to group products by their product categories on an e-commerce site, or group items by supplier, price etc.
+	          </td>
+	        </tr>
+	        <tr>
+	          <td>SUM()</td>
+	          <td>
+	          	SUM() adds all the values in a particular column
+	          </td>
+	          <td>
+	          	<code>SELECT SUM(parameter) FROM table;</code>
+	          </td>
+	        </tr>
+
+	        <tr>
+	          <td>MAX()</td>
+	          <td>
+	          	MAX() returns the row (entry) with the highest value for a specific column.
+	          </td>
+	          <td>
+	          	<code>SELECT MAX(parameter) FROM table;</code>
+	          </td>
+	        </tr>
+
+	       	<tr>
+	          <td>MIN()</td>
+	          <td>
+	          	MIN() returns the row (entry) with the lowest value for a specific column.
+	          </td>
+	          <td>
+	          	<code>SELECT MIN(parameter) FROM table;</code>
+	          </td>
+	        </tr>
+
+	        <tr>
+	          <td>AVG()</td>
+	          <td>
+	          	AVG() returns the average of all values in a specific column.
+	          </td>
+	          <td>
+	          	<code>SELECT AVG(parameter) FROM table;</code>
+	          </td>
+	        </tr>
+
+	       	<tr>
+	          <td>ROUND()</td>
+	          <td>
+	          	ROUND() rounds down the number of decimals as specified in the argument.<br>
+	          	If no integer is specified in the argument, ROUND() will round the value up/down to the closest integer.
+	          </td>
+	          <td>
+	          	<code>SELECT ROUND(INTGER) FROM table;</code>
+	          </td>
+	        </tr>
+        </table>
+    </section>
+
+    <section>
+    	<h2>Order of operations in an SQL command</h2>
+    	<p>
+    		SQL SELECT statements can be composed of many different operations. Whereas most databases are relatively flexible about the order of statements, you can boost performance by writing the command in the order that the statements will be processed. This will reduce slow response times and increase efficiency.<br>
+    		<em>For example the database must first retrieve the data before it can sort, group or make apply aggregate functions.</em>
+    	</p>
+    	<ol>
+    		<li><strong>FROM:</strong> Specifies the table to query from</li>
+    		<li><strong>JOIN-TYPE:</strong> Specifies way the code will combine multiple tables</li>
+    		<li><strong>ON:</strong> Keyword introducing the second table in the join condition</li>
+    		<li><strong>WHERE:</strong> Introduces conditional statements, only the entries for which the condition returns 'true' will be added to the result list</li>
+    		<li><strong>GROUP BY:</strong> Arrange identical data in groups</li>
+    		<li><strong>HAVING:</strong> Conditional statement, similar to WHERE (but one that works with aggregate functions)</li>
+    		<li><strong>SELECT:</strong> Clause that indicates a query</li>
+    		<li><strong>DISTINCT:</strong> Specifies that only unique values should be considered</li>
+    		<li><strong>ORDER BY:</strong> Sort elements in a specific alphanumerical order of a specific column</li>
+    		<li><strong>TOP:</strong> Specify the number of records to return (Similar to the LIMIT clause)</li>
+    	</ol>
+    </section>
+
+    <section>
+    	<h2>Wildcards</h2>
+    	<p>Wildcards are special symbols that trigger specific behavior in the SQL language:</p>
+    	<ul>
+    		<li><strong>*</strong> : Select ALL</li>
+    		<li><strong>_</strong> : The _ will be substituted by any possible character</li>
+    		<li><strong>%</strong> : Matches zero or more missing characters in a pattern
+    			<ul>
+    				<li>Example: <strong>A%</strong> : Matches all entries starting with the character 'A'</li>
+    				<li>Example: <strong>%a</strong> : Matches all entries ending on 'a'</li>
+    				<li>Example: <strong>%man%</strong> : Matches all entries starting and/or ending on 'man'</li>
+    			</ul>
+    		</li>
+    	</ul>
+    </section>
+
+
+
+
+
+  </article>
+
+  <hr>
+
+  <!--Footer Section (Same on every page)-->
+    <footer>
+      <div class="copyright float-left">
+      <p>&copy; Robin Soubry - 2016</p>
+      </div>
+      <div class="social-links float-left">
+        <a href="mailto:robin.soubry@gmail.com?Subject=Hello" class="mail"></a>
+        <a href="https://www.facebook.com/robin.soubry/" target="_blank" class="facebook"></a>
+        <a href="https://www.instagram.com/robinsoubry/" target="_blank" class="instagram"></a>
+        <a href="https://twitter.com/RSoubry" target="_blank" class="twitter"></a>
+        <a href="https://www.linkedin.com/in/robinsoubry" target="_blank" class="linkedin"></a>
+        <a href="https://github.com/RobinSoubry" target="_blank" class="github"></a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
