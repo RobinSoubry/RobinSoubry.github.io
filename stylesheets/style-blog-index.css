@@ -13,27 +13,6 @@
 	text-decoration: none;
 }
 
-.navigation-blogposts{
-	margin-top: 8px;
-	border: 1px solid orange;
-	background-color: lightgsilverray;
-	width: 652px;
-	border-radius: 8px;
-	height: 20px;
-	padding: 4px;
-}
-
-.navigation-blogposts > ul {
-	list-style-type: none;
-	margin: auto;
-}
-
-.navigation-blogposts > ul > li {
-	float: left;
-	margin: 0px;
-	width: 25%;
-}
-
 .active-post-tab{
 	color: orange;
 	font-weight: bold;

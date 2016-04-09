@@ -101,3 +101,24 @@ a.linkedin:hover{background-position:-120px 0;}
  
 a.mail{display:block; background: url(../imgs/social-sprite.png) no-repeat -150px -30px; width:30px; height:30px;}
 a.mail:hover{background-position:-150px 0;}
+
+.navigation-categories{
+	margin-top: 8px;
+	border: 1px solid orange;
+	background-color: lightgsilverray;
+	width: 960px;
+	border-radius: 8px;
+	height: 20px;
+	padding: 4px;
+}
+
+.navigation-categories > ul {
+	list-style-type: none;
+	margin: auto;
+}
+
+.navigation-categories > ul > li {
+	float: left;
+	margin: 0px;
+	width: 25%;
+}
